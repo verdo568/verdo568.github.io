@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>維爾多至高法</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .article {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;   
+            cursor: pointer;
+            font-size: 0.8em;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 50px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #copyMessage {
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+    <script>
+        function copyText() {
+            var content = document.getElementById('contentToCopy').innerText;
+            var tempInput = document.createElement('textarea');
+            tempInput.value = content;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            var copyMessage = document.getElementById('copyMessage');
+            copyMessage.style.display = 'block';
+            setTimeout(function() {
+                copyMessage.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <h1>維爾多至高法</h1>
+    <section id="contentToCopy">
+        <h2>第一章：總綱</h2>
+        <div class="article">
+            <h3>第一條</h3>
+            <p>維爾多基於民主而建立</p>
+        </div>
+        <div class="article">
+            <h3>第二條</h3>
+            <p>維爾多之主權屬於國家</p>
+        </div>
+        <div class="article">
+            <h3>第三條</h3>
+            <p>具有維爾多國籍者為維爾多國民</p>
+        </div>
+        <div class="article">
+            <h3>第四條</h3>
+            <p>維爾多各民族一律平等</p>
+        </div>
+        <div class="article">
+            <h3>第五條</h3>
+            <p>維爾多國旗定為藍黃綠（左至右）</p>
+        </div>
+        <h2>第二章：人民之權利義務</h2>
+        <div class="article">
+            <h3>第六條</h3>
+            <p>維爾多人民，無分男女、宗教、種族、階級、黨派，在法律上一律平等</p>
+        </div>
+        <div class="article">
+            <h3>第七條</h3>
+            <p>人民身體之自由應予保障。除現行犯之逮捕由法律另定外，非經司法或警察機關依法定程序，不得逮捕拘禁。非由法院依法定程序，不得審問處罰。非依法定程序之逮捕、拘禁、審問、處罰，得拒絕之</p>
+            <p>人民因犯罪嫌疑被逮捕拘禁時，其逮捕拘禁機關應將逮捕拘禁原因，以書面告知本人及其本人指定之親友，並至遲於二十四小時內移送該管法院審問。本人或他人亦得聲請該管法院，於二十四小時內向逮捕之機關提審</p>
+            <p>法院對於前項聲請，不得拒絕，並不得先令逮捕拘禁之機關查覆。逮捕拘禁之機關，對於法院之提審，不得拒絕或遲延</p>
+            <p>人民遭受任何機關非法逮捕拘禁時，其本人或他人得向法院聲請追究，法院不得拒絕，並應於二十四小時內向逮捕拘禁之機關追究，依法處理</p>
+        </div>
+        <div class="article">
+            <h3>第八條</h3>
+            <p>人民除現役軍人外，不受軍事審判</p>
+        </div>
+        <div class="article">
+            <h3>第九條</h3>
+            <p>人民有居住及遷徙之自由</p>
+        </div>
+        <div class="article">
+            <h3>第十條</h3>
+            <p>人民有言論、講學、著作及出版之自由</p>
+        </div>
+        <div class="article">
+            <h3>第十一條</h3>
+            <p>人民有秘密通訊之自由</p>
+        </div>
+        <div class="article">
+            <h3>第十二條</h3>
+            <p>人民有信仰宗教之自由</p>
+        </div>
+        <div class="article">
+            <h3>第十三條</h3>
+            <p>人民有集會及結社之自由</p>
+        </div>
+        <div class="article">
+            <h3>第十四條</h3>
+            <p>人民之生存權、工作權及財產權，應予保障</p>
+        </div>
+        <div class="article">
+            <h3>第十五條</h3>
+            <p>人民有請願、訴願及訴訟之權</p>
+        </div>
+        <div class="article">
+            <h3>第十六條</h3>
+            <p>人民有選舉、罷免、創制及複決之權</p>
+        </div>
+        <div class="article">
+            <h3>第十七條</h3>
+            <p>人民有應考試服公職之權</p>
+        </div>
+        <div class="article">
+            <h3>第十八條</h3>
+            <p>人民有依法律納稅之義務</p>
+        </div>
+        <div class="article">
+            <h3>第十九條</h3>
+            <p>凡人民之其他自由及權利，不妨害社會秩序公共利益者，均受維爾多至高法之保障</p>
+        </div>
+        <div class="article">
+            <h3>第二十條</h3>
+            <p>以上各條列舉之自由權利，除為防止妨礙他人自由、避免緊急危難、維持社會秩序，或增進公共利益所必要者外，不得以法律限制之</p>
+        </div>
+        <div class="article">
+            <h3>第二十一條</h3>
+            <p>凡公務員違法侵害人民之自由或權利者，除依法律受懲戒外，應負刑事及民事責任。被害人民就其所受損害，並得依法律向國家請求賠償</p>
+        </div>
+        <h2>第三章：元首</h2>
+        <div class="article">
+            <h3>第二十二條</h3>
+            <p>元首對外代表維爾多</p>
+        </div>
+        <div class="article">
+            <h3>第二十三條</h3>
+            <p>元首為三軍統帥</p>
+        </div>
+        <div class="article">
+            <h3>第二十四條</h3>
+            <p>元首依法宣布戒嚴，但須經服民議會之通過或追認。服民議會認為必要時，得決議移請元首解嚴</p>
+        </div>
+        <div class="article">
+            <h3>第二十五條</h3>
+            <p>元首依法任免文武官員</p>
+        </div>
+        <div class="article">
+            <h3>第二十六條</h3>
+            <p>元首依法授與榮典</p>
+        </div>
+        <div class="article">
+            <h3>第二十七條</h3>
+            <p>國家遇有天然災害、癘疫，或國家財政經濟上有重大變故，須為急速處分時，元首於服民議會休會期間，得經管理層會議之決議，依緊急命令法，發布緊急命令，為必要之處置。但須於發布命令後一個月內提交服民議會追認。如服民議會不同意時，該緊急命令立即失效</p>
+        </div>
+        <div class="article">
+            <h3>第二十八條</h3>
+            <p>元首對於院與院間之爭執，除本憲法有規定者外，得召集有關各院院長會商解決之</p>
+        </div>
+        <div class="article">
+            <h3>第二十九條</h3>
+            <p>維爾多國民遊玩滿一月者，得被選為元首</p>
+        </div>
+        <div class="article">
+            <h3>第三十條</h3>
+            <p>元首之任期為二月連選得連任</p>
+        </div>
+        <div class="article">
+            <h3>第三十一條</h3>
+            <p>元首應於就職時宣誓，誓詞如左：「余謹以至誠，向全國人民宣誓，余必遵守維爾多至高法，盡忠職務，增進人民福利，保衛國家，無負國民付託。如違誓言，願受國家嚴厲之制裁。謹誓」</p>
+        </div>
+        <div class="article">
+            <h3>第三十二條</h3>
+            <p>元首缺位時，應由服主暫任至元首任期屆滿為止。元首及服主因故無法治理時，由行政院院長代行其職權，並補選元首使其任期以補足原任元首未滿之任期為止。元首因故不能視事時，由服主代行其職權。元首、服主均不能視事時，由行政院院長代行其職權</p>
+        </div>
+        <div class="article">
+            <h3>第三十三條</h3>
+            <p>元首於任滿之日解職，如屆期次任元首尚未選出，或選出元首未就職時，由行政院院長代行元首職權</p>
+        </div>
+        <div class="article">
+            <h3>第三十四條</h3>
+            <p>行政院院長代行元首職權時，其期限不得逾一個月</p>
+        </div>
+        <div class="article">
+            <h3>第三十五條</h3>
+            <p>元首除犯內亂或外患罪外，非經罷免或解職，不受刑事上之訴究</p>
+        </div>
+        <h2>第四章：行政    </h2>
+        <div class="article">
+            <h3>第三十六條</h3>
+            <p>行政院為國家最高行政機關，即管理層</p>
+        </div>
+        <div class="article">
+            <h3>第三十七條</h3>
+            <p>行政院設院長、副院長一人，由管理層互選</p>
+        </div>
+        <div class="article">
+            <h3>第三十八條</h3>
+            <p>行政院依左列規定，對服民議會負責：</p>
+            <ol>
+                <li>行政院有向服民議會提出施政方針及施政報告之責。議會委員在開會時，有向行政院院長及行政院各部會首長質詢之權</li>
+                <li>服民議會對於行政院之重要政策不贊同時，得以決議移請行政院變更之。行政院對於議會之決議，得經元首之核可，移請議會覆議。覆議時，如經出席議會委員三分之二維持原決議，行政院院長應即接受該決議或辭職</li>
+                <li>行政院對於議會決議之法律案、預算案、條約案，如認為有窒礙難行時，得經元首之核可，於該決議案送達行政院十日內，移請議會覆議。覆議時，如經出席議會委員三分之二維持原案，行政院院長應即接受該決議或辭職</li>
+            </ol>
+        </div>
+        <div class="article">
+            <h3>第三十九條</h3>
+            <p>行政院設行政院會議，由行政院院長、副院長、各部會首長及不管部會之政務委員組織之，以院長為主席</p>
+            <p>行政院院長、各部會首長，須將應行提出於立法院之法律案、預算案、戒嚴案、大赦案、宣戰案、媾和案、條約案及其他重要事項，或涉及各部會共同關係之事項，提出於行政院會議議決之</p>
+        </div>
+        <div class="article">
+            <h3>第四十條</h3>
+            <p>服民議會為國家最高立法機關，由服民議會法規定之，代表人民行使立法權</p>
+        </div>
+        <div class="article">
+            <h3>第四十一條</h3>
+            <p>議會有議決法律案、預算案、戒嚴案、大赦案、宣戰案、媾和案、條約案及國家其他重要事項之權</p>
+        </div>
+        <div class="article">
+            <h3>第四十二條</h3>
+            <p>議會委員之任期由服民議會法規定之</p>
+        </div>
+        <div class="article">
+            <h3>第四十三條</h3>
+            <p>服民議會設院長、副院長各一人，由委員互選之</p>
+        </div>
+        <div class="article">
+            <h3>第四十四條</h3>
+            <p>議會遇有左列情事之一時，得開臨時會：</p>
+            <ol>
+                <li>元首之咨請</li>
+                <li>議會委員二分之一以上之請求</li>
+            </ol>
+        </div>
+        <div class="article">
+            <h3>第四十五條</h3>
+            <p>議會對於行政院所提預算案，不得為增加支出之提議</p>
+        </div>
+        <div class="article">
+            <h3>第四十六條</h3>
+            <p>議會開會時，關係院院長及各部會首長得列席陳述意見</p>
+        </div>
+        <div class="article">
+            <h3>第四十七條</h3>
+            <p>議會法律案通過後，移送元首及行政院，元首應於收到後三日內公布</p>
+        </div>
+        <div class="article">
+            <h3>第四十八條</h3>
+            <p>議會委員在院內所為之言論及表決，對院外不負責任</p>
+        </div>
+        <div class="article">
+            <h3>第四十九條</h3>
+            <p>議會委員，除現行犯外，非經議會許可，不得逮捕或拘禁</p>
+        </div>
+        <h2>第五章：裁判</h2>
+        <div class="article">
+            <h3>第五十條</h3>
+            <p>最高裁判所為國家最高司法機關，掌理民事、刑事、行政訴訟、軍事訴訟之審判及公務員之懲戒</p>
+        </div>
+        <div class="article">
+            <h3>第五十一條</h3>
+            <p>最高裁判所解釋憲法，並有統一解釋法律及命令之權</p>
+        </div>
+        <div class="article">
+            <h3>第五十二條</h3>
+            <p>裁判院設所長、副所長各一人，由元首提名</p>
+        </div>
+        <div class="article">
+            <h3>第五十三條</h3>
+            <p>最高裁判所設大法官若干人，掌理本至高法第五十一條規定事項，由元首提名</p>
+        </div>
+        <div class="article">
+            <h3>第五十四條</h3>
+            <p>法官須超出黨派以外，依據法律獨立審判，不受任何干涉</p>
+        </div>
+        <div class="article">
+            <h3>第五十五條</h3>
+            <p>法官為終身職，非受刑事或懲戒處分，或禁治產之宣告，不得免職。非依法律，不得停職、轉任或減俸</p>
+        </div>
+        <h2>第六章：檢查</h2>
+        <div class="article">
+            <h3>第五十六條</h3>
+            <p>檢查院為國家最高監察機關，行使同意、彈劾、糾舉及審計權</p>
+        </div>
+        <div class="article">
+            <h3>第五十七條</h3>
+            <p>檢查院設檢查委員，由元首推舉，服民議會同意任命之</p>
+        </div>
+        <div class="article">
+            <h3>第五十八條</h3>
+            <p>檢查院設院長、副院長各一人，由檢查委員互選之</p>
+        </div>
+        <div class="article">
+            <h3>第五十九條</h3>
+            <p>檢查委員之任期為永遠，除因故卸任否則不補選</p>
+        </div>
+        <div class="article">
+            <h3>第六十條</h3>
+            <p>檢查院依本至高法行使同意權時，由出席委員過半數之議決行之</p>
+        </div>
+        <div class="article">
+            <h3>第六十一條</h3>
+            <p>檢查院為行使監察權，得向行政院及其各部會調閱其所發布之命令及各種有關文件</p>
+        </div>
+        <div class="article">
+            <h3>第六十二條</h3>
+            <p>檢查院得按行政院及其各部會之工作，分設若干委員會，調查一切設施，注意其是否違法或失職</p>
+        </div>
+        <div class="article">
+            <h3>第六十三條</h3>
+            <p>檢查院經各該委員會之審查及決議，得提出糾正案，移送行政院及其有關部會，促其注意改善</p>
+            <P>檢查院對於中央公務人員，認為有失職或違法情事，得提出糾舉案或彈劾案，如涉及刑事，應移送法院辦理</P>
+        </div>
+        <div class="article">
+            <h3>第六十四條</h3>
+            <p>檢查院對於中央公務人員之彈劾案，須經檢查委員一人以上之提議，五人以上之審查及決定，始得提出</p>
+        </div>
+        <div class="article">
+            <h3>第六十五條</h3>
+            <p>檢查院對於司法院人員失職或違法之彈劾，適用本至高法第六十一條、第六十三條及第六十四條之規定</p>
+        </div>
+        <div class="article">
+            <h3>第六十六條</h3>
+            <p>檢查院對於元首之彈劾案，須有全體檢查委員四分之一以上之提議，全體檢查委員過半數之審查及決議，向最高裁判所提出之</p>
+        </div>
+        <div class="article">
+            <h3>第六十七條</h3>
+            <p>檢查委員在院內所為之言論及表決，對院外不負責任</p>
+        </div>
+        <div class="article">
+            <h3>第六十八條</h3>
+            <p>檢查委員，除現行犯外，非經檢查院許可，不得逮捕或拘禁</p>
+        </div>
+        <div class="article">
+            <h3>第六十九條</h3>
+            <p>檢查院設審計長，由元首提名，經服民議會同意任命之</p>
+        </div>
+        <div class="article">
+            <h3>第七十條</h3>
+            <p>審計長應於行政院提出決算後一個月內，依法完成其審核，並提出審核報告於服民議會</p>
+        </div>
+        <h2>第七章：中央之權限</h2>
+        <div class="article">
+            <h3>第七十一條</h3>
+            <p>由中央立法並執行之：</p>
+            <ol>
+                <li>外交</li>
+                <li>國防與國防軍事  </li>
+                <li>國籍法及刑事、民事、商事之法律</li>
+                <li>司法制度</li>
+                <li>航空、國道、國有鐵路、航政、郵政及電政</li>
+                <li>中央財政與國稅</li>
+                <li>國稅與省稅、州稅之劃分</li>
+                <li>國營經濟事業</li>
+                <li>幣制及國家銀行</li>
+                <li>度量衡</li>
+                <li>國際貿易政策</li>
+                <li>涉外之財政經濟事項</li>
+                <li>其他依本至高法所定關於中央之事項</li>
+            </ol>
+        </div>
+        <h2>第八章：選舉、罷免</h2>
+        <div class="article">
+            <h3>第七十二條</h3>
+            <p>本至高法所規定之各種選舉，除本憲法別有規定外，以普通、平等、直接及無記名投票之方法行之</p>
+        </div>
+        <div class="article">
+            <h3>第七十三條</h3>
+            <p>維爾多國民遊玩滿一周者，有依法選舉之權，遊玩滿二週者，有依法被選舉之權</p>
+        </div>
+        <div class="article">
+            <h3>第七十四條</h3>
+            <p>本至高法所規定各種選舉之候選人，一律公開競選</p>
+        </div>
+        <div class="article">
+            <h3>第七十五條</h3>
+            <p>選舉應嚴禁威脅利誘。選舉訴訟，由法院審判之</p>
+        </div>
+        <div class="article">
+            <h3>第七十六條</h3>
+            <p>被選舉人得由原選舉區依法罷免之</p>
+        </div>
+        <h2>第九章：基本國策</h2>
+        <div class="article">
+            <h3>第七十七條</h3>
+            <p>維爾多之國防，以保衛國家安全為目的</p>
+        </div>
+        <div class="article">
+            <h3>第七十八條</h3>
+            <p>全國陸海空軍，須超出個人、地域及黨派關係以外，效忠國家，愛護人民</p>
+        </div>
+        <div class="article">
+            <h3>第七十九條</h3>
+            <p>任何黨派及個人不得以武裝力量為政爭之工具</p>
+        </div>
+        <div class="article">
+            <h3>第八十條</h3>
+            <p>我國之外交，應本獨立自主之精神，平等互惠之原則，敦睦邦交，尊重條約及聯合國憲章，以保護僑民權益，促進國際合作，提倡國際正義，確保世界和平</p>
+        </div>
+        <h2>第十章：至高法執行及修正</h2>
+        <div class="article">
+            <h3>第八十一條</h3>
+            <p>本至高法所稱之法律，謂經服民議會通過，元首公布之法律</p>
+        </div>
+        <div class="article">
+            <h3>第八十二條</h3>
+            <ol>
+                <li>法律與至高法牴觸者無效</li>
+                <li>法律與憲法有無牴觸發生疑義時，由最高裁判所解釋之</li>
+            </ol>
+        </div>
+        <div class="article">
+            <h3>第八十三條</h3>
+            <ol>
+                <li>命令與憲法或法律牴觸者無效</li>
+                <li>憲法之解釋，由最高裁判院為之。</li>
+            </ol>
+        </div>
+        <div class="article">
+            <h3>第八十四條</h3>
+            <p>憲法之修改，應依左列程序之一為之：</p>
+            <ol>
+                <li>由管理員提議，管理員會議三分之二之出席，及出席代表四分之三之決議，得修改之</li>
+                <li>由服民議會委員四分之一之提議，四分之三之出席，及出席委員四分之三之決議，擬定至高法修正案，提請管理員會議複決。此項至高法修正案，應於管理員會議開會前一周公告之</li>
+            </ol>
+        </div>
+        <div class="article">
+            <h3>第八十五條</h3>
+            <p>本至高法規定事項，有另定實施程序之必要者，以法律定之</p>
+        </div>
+        <div class="article">
+            <h3>第八十六條</h3>
+            <p>本至高法施行之準備程序，由制定憲法之管理員會議定之</p>
+        </div>
+    </section>
+
+    <!-- 複製按鈕 -->
+    <button onclick="copyText()">複製條文</button>
+    <p id="copyMessage">條文已複製！</p>
+</body>
+</html>
