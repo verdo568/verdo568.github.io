@@ -1,0 +1,234 @@
+    <!DOCTYPE html>
+    <html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>政黨法</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 20px;
+                background-color: #f4f4f4;
+            }
+            h1, h2, h3 {
+                color: #333;
+            }
+            section {
+                margin-bottom: 20px;
+            }
+            .article {
+                margin-left: 20px;
+                margin-bottom: 10px;
+            }
+            button {
+                padding: 5px 20px; /* 調整按鈕大小，讓它更長一點 */
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 0.8em; /* 調整字體大小 */
+                position: fixed; /* 固定位置 */
+                top: 20px; /* 距離上方20px */
+                right: 20px; /* 距離右側20px */
+                border-radius: 50px; /* 使按鈕成為橢圓形，數值越大形狀越圓 */
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+            #copyMessage {
+                color: green;
+                font-weight: bold;
+                display: none;
+            }
+        </style>
+        <script>
+            function copyText() {
+                // 選取指定的內容區域
+                var content = document.getElementById('contentToCopy').innerText;
+
+                // 建立一個暫時的文本區域來進行複製
+                var tempInput = document.createElement('textarea');
+                tempInput.value = content;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                tempInput.setSelectionRange(0, 99999); // 兼容移動設備
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+
+                // 顯示複製成功的訊息
+                var copyMessage = document.getElementById('copyMessage');
+                copyMessage.style.display = 'block';
+
+                // 2秒後隱藏提示訊息
+                setTimeout(function() {
+                    copyMessage.style.display = 'none';
+                }, 2000);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>政黨法</h1>
+        <h3>為確保各政黨公平競爭環境，並且確保政黨的組織以及運作合乎法規，特別設立本法案以健全維爾多的政黨政治
+        </h3>
+        <section id="contentToCopy">
+            <h2>用詞</h2>
+            <p>1. <strong>主管機關</strong>：指管理層，以下稱為主管機關。</p>
+            <p>2. <strong>政黨</strong>：指維爾多地區以政治為目的的組織、團體，以下稱為政黨。</p>
+            <p>3. <strong>黨規</strong>：政黨設立之章程，以下稱為黨規。</p>
+            <p>4. <strong>黨主席</strong>：指政黨主席，以下稱為黨主席。</p>
+            <p>5. <strong>黨員</strong>：指政黨內部人士，以下稱為黨員。</p>
+            
+            <h2>第一章：成立</h2>
+            <div class="article">
+                <h3>第一條</h3>
+                <ol>
+                    <li>政黨成立需要經過填寫表單並且經過主管機關同意過後才可成立。</li>
+                    <li>政黨成立的條件有以下四點:總人員數  應當在三人以上、需要提供黨徽（旗）、黨部（或是預定建設地）以及其名稱。</li>
+                    <li>政黨名稱不得包含歧視、侮辱、性暗示以及各種具爭議性詞彙，且不得使用當前以成立政黨相似之名。</li>
+                    <li>黨徽（旗）不得和現存政黨相似或者元素相近，且不得使用具有性暗示、辱罵或者是具爭議之圖標。</li>
+                </ol>
+            </div>
+            <div class="article">
+                <h3>第二條</h3>
+                <p>政黨在經成立後需在七日之內提交出黨規以及成員名單，如未在期限前完成第一條之規定，將會以第一章第五條將政黨解散。</p>
+            </div>
+            <div class="article">
+                <h3>第三條</h3>
+                <ol>
+                    <li>黨員需要以具有維爾多國民之人員，如非具有維爾多國民身份之黨員加入政黨，主管機關需以第一章第五條將該政黨解散。</li>
+                    <li>黨員必須使用未具犯罪前科之人員，如具有前科則不得錄用，如有聘用具犯罪前科之人員主管機關需以第一章第五條將該政黨解散。</li>
+                    <li>國民具有加入以及退出政黨之自由，各政黨不得違反國民之自由，如有強迫或威脅等行為，主管機關需以第一章第五條將政黨解散。</li>
+                </ol>
+            </div>
+            <div class="article">
+                <h3>第四條</h3>
+                <ol>
+                    <li>如黨員在加入政黨後觸犯刑法，政黨應在三日內開除其黨籍，如未在時間內完成視同為觸犯第一章第三條第二點。</li>
+                    <li>如黨員因觸犯刑法而遭開除黨籍，而該政黨因此而總人數少於三人，那麼將給與七日緩衝期用以聘用新黨員，如日期內未完成主管機關需以第一章第五條將政黨解散。</li>
+                    <li>如主席因觸法而遭開除黨籍，其政黨應在三日內推派新主席上任，如未在期限內完成，主管機關需以第一章第五條將政黨解散。</li>
+                </ol>
+            </div>
+            <div class="article">
+                <h3>第五條</h3> 
+                <p>如政黨違規情節重大，主管機關可視情況將該政黨解散。</p>
+            </div>
+            <div class="article">
+                <h3>第六條</h3>
+                <p>政黨不可擁有除主事事務所和附屬辦公場所等以外之不動產。</p>
+            </div>
+
+            <h2>第二章：運作</h2>
+            <div class="article">
+                <h3>第一條</h3>
+                <ol>
+                    <li>政黨內部運作將以政黨內部之黨規為基準。</li>
+                    <li>黨規的內容不得觸犯本國其他律法。</li>
+                </ol>
+            </div>
+            <div class="article">
+                <h3>第二條</h3>
+                <p>黨規之內容應當明確記載並且標示以下內容：</p>
+                <ol>
+                    <li>政黨名稱以及簡稱</li>
+                    <li>宗旨</li>
+                    <li>主事事務所（黨部）所在地 </li>
+                    <li>政黨下轄機構的職責、義務以及權利</li>
+                    <li>主席推派方式以及各下轄機構負責人選舉方式</li>
+                    <li>服民議會代表推選方式</li>
+                    <li>第二章第二條之第五和第六點的人員推派、任期、名額以及解任等規定</li>
+                    <li>黨員基本條款以及各項違反律法等處置</li>
+                    <li>黨規變更之程序 </li>
+                </ol>
+            </div>
+            <div class="article">
+                <h3>第三條</h3>
+                <p>當召開服民議會時所有登記在冊之政黨應派選一名代表參加，如未參加議會滿三次將解散政黨。</p>
+            </div>
+            <div class="article">
+                <h3>第四條</h3>
+                <ol>
+                    <li>政黨運作資金可透過捐贈、黨費和本法規定之依法所得等方式獲得。</li>
+                    <li>政黨不得以政治的名義強迫、推銷和販售各類商品。</li>
+                    <li>黨員不得接受超過一組綠寶石或者同等價值的物品以及金額，如接收則以黨規或者本法的第二章第五條開除黨籍。</li>
+                    <li>如需政府補助政黨需將補助事項以及金額以電子檔交由主管機關審理。</li>
+                </ol>
+            </div>
+            <div class="article">
+                <h3>第五條</h3>
+                <p>當黨員因違反本法或者違反黨規，主管機關及政黨可對該黨員進行開除黨籍。</p>
+            </div>
+            <div class="article">
+                <h3>第六條</h3>
+                <p>政黨應在其下轄機構中包含一個處理黨員加入、退出以及開除黨籍等行為之審理機構。</p>
+            </div>
+            <div class="article">
+                <h3>第七條</h3>
+                <p>如政黨自行解散或者合併必須在其解散前五日提交電子檔至主管機關，由主管機關核實之後待日期到達即可解散和合併。</p>
+            </div>
+            <div class="article">
+                <h3>第八條</h3>
+                <p>當政黨滿足以下條件時可進行合併：</p>
+                <ol>
+                    <li>該政黨不滿三人</li>
+                    <li>該政黨處於短期未運作之狀態（以是否參與服民議會為基準）</li>
+                    <li>該政黨無法推派新主席 </li>
+                </ol>
+            </div>
+            <div class="article">
+                <h3>第九條</h3>
+                <p>如政黨合併則合併政黨人員需將名單重新上報。</p>
+            </div>
+            <div class="article">
+                <h3>第十條</h3>
+                <ol>
+                    <li>每月月底為政黨狀況評定日，每個登記在冊之黨政應上交人員名單和財政報告至主管機關。</li>
+                    <li>如財政報告表示該政黨以無法正常運作，主管機關可視情況對該政黨使用第一章第五條法規，對該政黨進行解散。</li>
+                </ol>
+            </div>
+
+            <h2>第三章：罰則</h2>
+            <div class="article">
+                <h3>第一條</h3>
+                <p>當政黨被告發具有違反本法案之任意一條或違反本國法律，將由最高檢查院進行取證以及調查，在調查結束前該政黨不得參與各項會議。</p>
+            </div>
+            <div class="article">
+                <h3>第二條</h3>
+                <p>政黨在經調查後如未具有違反本法案或者本國任意一條法律，可申請在此期間各項損失等補償。</p>
+            </div>
+            <div class="article">
+                <h3>第三條</h3>
+                <p>當黨員觸犯本國法律後經檢查院調查結束後發現其有政黨指使或是有其他黨員協助，主管機關可依照情節輕重進行開除黨籍以及解散政黨。</p>
+            </div>
+            <div class="article">
+                <h3>第四條</h3>
+                <p>黨員之言論如具有侮辱、侵犯以及性暗示等，政黨須依黨規進行處置。</p>
+            </div>
+            <div class="article">
+                <h3>第五條</h3>
+                <p>所有政黨須對第三章第四條之情事有相關罰則，若無相關罰則，則主管機關自行決定罰則</p>
+            </div>
+            <div class="article">
+                <h3>第六條</h3>
+                <p>如發現收賄行為，經檢查院調查結束後證實，則沒收所有賄賂物和相關黨產。</p>
+            </div>
+            <div class="article">
+                <h3>第七條</h3>
+                <p>任何黨員被發現其犯罪證據時政黨不得包庇，如被發現該行為且經過調查證實，則可照第一章第五條解散該政黨。</p>
+            </div>
+            <div class="article">
+                <h3>第八條</h3>
+                <ol>
+                    <li>本法最終解釋權為最高裁判所</li>
+                    <li>如本法條款具有矛盾以及解釋不清將由最高裁判所進行修改訂正</li>
+                </ol>
+            </div>
+
+        </section>
+
+        <!-- 複製按鈕 -->
+        <button onclick="copyText()">複製條文內容</button>
+        <p id="copyMessage">內容已複製！</p>
+
+    </body>
+    </html>

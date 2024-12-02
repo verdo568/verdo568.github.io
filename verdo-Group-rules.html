@@ -1,0 +1,112 @@
+    <!DOCTYPE html>
+    <html lang="zh-Hant">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>維爾多群規</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 20px;
+                background-color: #f4f4f4;
+            }
+            h1, h2, h3 {
+                color: #333;
+            }
+            section {
+                margin-bottom: 20px;
+            }
+            .article {
+                margin-left: 20px;
+                margin-bottom: 10px;
+            }
+            button {
+                padding: 5px 20px; /* 調整按鈕大小，讓它更長一點 */
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 0.8em; /* 調整字體大小 */
+                position: fixed; /* 固定位置 */
+                top: 20px; /* 距離上方20px */
+                right: 20px; /* 距離右側20px */
+                border-radius: 50px; /* 使按鈕成為橢圓形，數值越大形狀越圓 */
+            }
+            button:hover {
+                background-color: #45a049;
+            }
+            #copyMessage {
+                color: green;
+                font-weight: bold;
+                display: none;
+            }
+        </style>
+        <script>
+            function copyText() {
+                // 選取指定的內容區域
+                var content = document.getElementById('contentToCopy').innerText;
+
+                // 建立一個暫時的文本區域來進行複製
+                var tempInput = document.createElement('textarea');
+                tempInput.value = content;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                tempInput.setSelectionRange(0, 99999); // 兼容移動設備
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+
+                // 顯示複製成功的訊息
+                var copyMessage = document.getElementById('copyMessage');
+                copyMessage.style.display = 'block';
+
+                // 2秒後隱藏提示訊息
+                setTimeout(function() {
+                    copyMessage.style.display = 'none';
+                }, 2000);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>🌐維爾多聊天群規</h1>
+        <p>📅制定日期：2024年2月29日</p>
+        <p>📅修改日期：2024年9月10日</p>
+        
+        <h2>1️⃣ 管理權限</h2>
+        <p>🛡️ 管理員擁有最高治理權，成員僅可提供建議並邀請他人，但必須嚴格遵守群規。</p>
+        
+        <h2>2️⃣ 禁止辱罵</h2>
+        <p>🚫 群內嚴禁隨意辱罵他人。經檢舉查實，違規者將被記⚠️警告一次。</p>
+        
+        <h2>3️⃣ 禁止洗版</h2>
+        <p>🚫 禁止洗版行為。違規者將根據情節輕重處理。</p>
+        
+        <h2>4️⃣ 嚴重違規處理</h2>
+        <p>❗ 對於洗版、騷擾、引戰等嚴重違規行為，情節嚴重者將被直接⛔踢出群組，並列入黑名單📝。</p>
+        
+        <h2>5️⃣ 禁止討論商業模式</h2>
+        <p>🚫 禁止討論直銷、網路簽注或網路連鎖賺錢等商業模式💼。</p>
+        
+        <h2>6️⃣ 元首與治理權</h2>
+        <p>👑 群組最高領導人為“元首”，賦予總管🛠️全權管理群組事務。</p>
+        
+        <h2>7️⃣ 憲政與旗幟禁令</h2>
+        <p>⚠️ 意圖破壞中華民國憲政體製或傳播恐慌、散佈極端旗幟（如法西斯、納粹、極端伊斯蘭）訊息者，記⚠️警告兩次。</p>
+        
+        <h2>8️⃣ 宣群</h2>
+        <p>宣傳群組前必須尋問過管理員</p>
+        
+        <h2>9️⃣ 禁止歧視</h2>
+        <p>🤝 群內成員必須尊重他人的性向💖和身體特徵💪，並禁止任何形式的歧視行為。</p>
+        
+        <h2>🔟 警告與懲罰機制</h2>
+        <p>⚠️ 群組實行三次警告⏳即踢出的製度。管理員可依違規情節輕重自行決定處罰🔨，或予以口頭警告。
+
+        </section>
+
+        <!-- 複製按鈕 -->
+        <button onclick="copyText()">複製條文內容</button>
+        <p id="copyMessage">內容已複製！</p>
+
+    </body>
+    </html>

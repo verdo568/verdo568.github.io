@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伺服器刑法</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .article {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;   
+            cursor: pointer;
+            font-size: 0.8em;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 50px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #copyMessage {
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+    <script>
+        function copyText() {
+            var content = document.getElementById('contentToCopy').innerText;
+            var tempInput = document.createElement('textarea');
+            tempInput.value = content;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            var copyMessage = document.getElementById('copyMessage');
+            copyMessage.style.display = 'block';
+            setTimeout(function() {
+                copyMessage.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <h1>伺服器刑法</h1>
+    <section id="contentToCopy">
+        <h2>第一章</h2>
+        <div class="article">
+            <ol>
+                <li>伺服器最高審判機關為最高裁判所</li>
+                <li>伺服器最高檢察機關為最高檢察院</li>
+                <li>糾紛優先以私下談判為優先解決辦法，切勿任意提告</li>
+                <li>重大犯罪行為需最高檢察院發布傳票並持傳票逮捕犯人</li>
+                <li>軍事人員犯罪者，由最高檢察院發布通緝令，逮捕歸案後交由軍事法庭審理，不服者，可上訴最高裁判所</li>
+                <li>裁判所法官量刑標準皆依當庭審判長裁定，如不服需在48小時內提出上訴，最高可到三審</li>
+                <li>一審為地方裁判所，二審為高等裁判所(維爾多裁判所 )，三審為最高裁判所</li>
+                <li>若被告無在48小時內提出上訴，可直接定讞</li>
+                <li>本法所使用的時區為GMT+8</li>
+                <li>法官必須遵守「以監禁為主刑，罰金為副刑」的規定，並可依據事情的嚴重程度，決定是否將主刑轉為易科罰金，每小時4顆綠寶石。</li>
+                <li>被告未經審判證明有罪確定前，推定其為無罪</li>
+                <li>必要時，法官可宣判被告褫奪公權</li>
+                <li>累犯三次者，加重其刑至二分之一</li>
+                <li>必要時，法官可增減其刑</li>
+                <li>若公務人員犯罪，終身褫奪公權，不得在擔任公職</li>
+                <li>若犯後態度誠懇，有悔改意願，法官可判緩刑最高兩個月，在緩刑期間無再度犯罪，則已宣告的刑罰即不再執行</li>
+            </ol>
+        </div>
+
+        <h2>罪刑解釋</h2>
+        <div class="article">
+            <ol>
+                <li><strong>罰金</strong>：指上繳伺服器通用貨幣「綠寶石」至公庫</li>
+                <li><strong>監禁</strong>：指關入最高裁判所之附屬之人民監獄</li>
+                <li><strong>徒刑</strong>：指封鎖其ID帳號但不永久</li>
+                <li><strong>死刑</strong>：指永久封鎖其ID帳號不得進入伺服器</li>
+            </ol>
+        </div>
+
+        <h2>第二章：罪責</h2>
+        <div class="article">
+            <h3>第一條</h3>
+            <p>濫用公權罪：伺服器管理員隨意使用權力，使伺服器成員感到困擾及不滿者，處以一天六小時之監禁並罰金六十四綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第二條</h3>
+            <p>破壞罪：於伺服器內破壞公務建物（政府建物、鐵路、公路等）及私人建物（住宅、農田等）並造成重大損害者，處以二十五天徒刑並罰金七十綠寶石。</p>
+            <p><em>註:刑滿仍犯罪者，經最高裁判所審判處以死刑，不得上訴；經常小規模破壞且不聽他人勸阻者，上述刑責減半</em></p>
+        </div>
+
+        <div class="article">
+            <h3>第三條</h3>
+            <p>故意殺人罪：持武器及物品並致人死亡者，處以死刑，不得上訴，因未發現地板缺漏或建築高低因死亡者，不列入本罪之行為</p>
+        </div>
+
+        <div class="article">
+            <h3>第四條</h3>
+            <p>竊盜罪：於伺服器內未經他人同意擅自拿取他人物品者，依盜竊物品之貴重程度，處以徒刑十分鐘以上至一天六個小時以下不等並罰金三十五綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第五條</h3>
+            <p>濫訴罪：未經調解，任意提告他人後撤訴且長時間相同行為，干擾司法機關者，處以監禁三十分鐘並罰金二十五綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第六條</h3>
+            <p>公然侮辱罪：於伺服器內發表損害他人之人格及尊嚴者，處以監禁一小時並罰金三十五綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第七條</h3>
+            <p>詐欺罪：於伺服器內以謊言騙取他人信用、物品等者，處以監禁二十五分鐘並罰金二十五綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第八條</h3>
+            <p>擾亂軍區罪：於伺服器內未經軍隊許可擅自進入軍隊管轄範圍者，處以監禁六小時並罰金五十綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第九條</h3>
+            <p>恐嚇罪：於伺服器內以恐嚇方式取得他人物品者，處以一個月徒刑並罰金二十綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第十條</h3>
+            <p>擾亂伺服器罪：於伺服器內外以外掛、指令等擾亂伺服器安寧、致人不益遊玩者，處以死刑，不得上訴</p>
+        </div>
+
+        <div class="article">
+            <h3>第十一條</h3>
+            <p>賄賂罪：以現實金錢、伺服器物品作為交換，試圖賄賂管理員者，處以監禁十五分鐘</p>
+        </div>
+
+        <div class="article">
+            <h3>第十二條</h3>
+            <p>妨礙公務罪:阻擋或干擾管理員執行公務，一個月徒刑並罰金三十二綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第十三條</h3>
+            <p>脫逃罪:若嫌犯因判決有罪確定，應執行刑罰但逃匿，加重本刑至二分之一，並發布通緝令由軍隊負責</p>
+        </div>
+
+        <div class="article">
+            <h3>第十四條</h3>
+            <p>公共危險罪:若有以下行為，處一天以上，一個月以下徒刑並罰金十綠寶石以上，三十二綠寶石以下</p>
+            <li><strong>破壞公共設施</strong>：故意損壞伺服器內的道路、橋樑、運輸系統（如礦車軌道、紅石設施）或其他公共設施，影響其他玩家正常使用。</li>
+            <li><strong>妨害交通</strong>：利用建築、擺放障礙物或其他方式，阻塞交通設施或致使玩家移動受阻，構成妨害伺服器內公共交通安全的情況。</li>
+        </div>
+
+        <div class="article">
+            <h3>第十五條</h3>
+            <p>妨礙自由罪:私行拘禁或以其他非法方法，剝奪人之行動自由者，處十天以下徒刑並罰金二十顆綠寶石</p>
+        </div>
+
+        <div class="article">
+            <h3>第十六條</h3>
+            <p>未遂罪:</p>
+            <ol>
+                <li>已著手於犯罪行為之實行而不遂者，為未遂犯</li>
+                <li>未遂犯之處罰，得按既遂犯之刑減輕之</li>
+                <li>行為不能發生犯罪之結果，又無危險者，不罰</li>
+                <li>已著手於犯罪行為之實行，而因己意中止或防止其結果之發生者，減輕或免除其刑。結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦同</li>
+                <li>前項規定，於正犯或共犯中之一人或數人，因己意防止犯罪結果之發生，或結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦適用之</li>
+            </ol>
+        </div>
+        
+        <div class="article">
+            <h3>第十七條</h3>
+            <p>教唆罪：教唆他人犯罪，處兩倍之被教唆人罪刑</p>
+        </div>
+
+        <div class="article">
+            <h3></h3>
+        </div>
+
+        <h2>第三章：附則</h2>
+        <div class="article">
+            <p>本法解釋及修改權歸於最高裁判所</p>
+        </div>
+    </section>
+
+    <!-- 複製按鈕 -->
+    <button onclick="copyText()">複製條文</button>
+    <p id="copyMessage">條文已複製！</p>
+</body>
+</html>

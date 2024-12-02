@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公會法</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .article {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8em;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 50px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #copyMessage {
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+    <script>
+        function copyText() {
+            var content = document.getElementById('contentToCopy').innerText;
+            var tempInput = document.createElement('textarea');
+            tempInput.value = content;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            var copyMessage = document.getElementById('copyMessage');
+            copyMessage.style.display = 'block';
+            setTimeout(function() {
+                copyMessage.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <h1>公會法</h1>
+    <section id="contentToCopy">
+        <h2>第一章：總則</h2>
+        <div class="article">
+            <ol>
+                <li>本條例稱之公會為以營利、合作並登記之社團法人</li>
+                <li>公會應遵守管理層及其組成之政府法律及法令，幫助及扶持新人玩家於伺服器遊玩</li>
+                <li>公會分為以下：
+                    <ol type="a">
+                        <li>職業公會</li>
+                        <li>合作公會</li>
+                        <li>政府公會</li>
+                    </ol>
+                </li>
+                <li>未經政府批准成立之公會，視同非法組織</li>
+                <li>本法所稱之主管單位為管理層</li>
+            </ol>
+        </div>
+
+        <h2>第二章：設立</h2>
+        <div class="article">
+            <ol start="6">
+                <li>公會設立之條件應符合以下：
+                    <ol>
+                        <li>申請者無犯罪紀錄或犯罪紀錄未達至徒刑</li>
+                        <li>公會申請者應兩人以上（含）</li>
+                        <li>經過主管單位認證之玩家</li>
+                    </ol>
+                </li>
+                <li>公會之設立應向主管單位提交以下公文：
+                    <ul>
+                        <li>名稱</li>
+                        <li>負責人</li>
+                        <li>總部設立區域</li>
+                        <li>宗旨</li>
+                        <li>會旗</li>
+                    </ul>
+                </li>
+                <li>公會之名稱及會旗，不應含有恐怖主義、仇恨及歧視之字符及標示</li>
+                <li>公會建築未建成時，應於自申請之日起建築</li>
+                <li>公會建築如自申請之日起十天內未建築完成，主管單位可拒絕批准成立、廢除其公會</li>
+                <li>公會如未因標示清楚而招致破壞，不得因觸犯伺服器刑事法第七條提起訴訟</li>
+                <li>公會自成立起，未運作三天，主管機關可向最高裁判所申請停止其公會地位</li>
+                <li>公會自成立起，公會無任何成員上線超過三天，主管機關可向最高裁判所申請停止其公會地位</li>
+                <li>公會章程應自行修訂之</li>
+                <li>公會章程應於申請日起24小時內提交至政府</li>
+                <li>政府公會章程依政府規定之</li>
+                <li>公會成立其武裝單位，因向主管單位批准成立</li>
+                <li>未經主管單位批准成立之武裝單位，最高裁判所可因觸犯伺服器刑事法第十五條，強行廢除其公會地位並將其申請人踢出伺服器內</li>
+                <li>公會應參加主管單位舉辦之政治協商會議，並提出意見</li>
+                <li>未參加政治協商會議並超過三次之公會，經主管單位討論，得廢除</li>
+            </ol>
+        </div>
+
+        <h2>第三章：會員</h2>
+        <div class="article">
+            <ol start="14">
+                <li>公會會員之名稱由公會自行決定</li>
+                <li>公會會員之權利，公會應保護之，不得侵害公會會員於其所在國家憲法及群規之保障權利</li>
+                <li>公會會員因遵守法律及法令</li>
+                <li>觸犯法律及法令公會會員者，公會不得藏匿、包庇、協助觸犯，如觸犯以上行為，主管單位得以強行廢除其公會</li>
+                <li>公會會員因以下情況，公會得廢除其公會會員身份：
+                    <ol type="a">
+                        <li>於現實世界死亡</li>
+                        <li>未上線遊玩伺服器五天</li>
+                        <li>觸犯法律及法令</li>
+                        <li>觸犯公會之章程</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <h2>第四章：合併及解散</h2>
+        <div class="article">
+            <ol start="19">
+                <li>公會可因以下緣由合併或解散：
+                    <ol type="a">
+                        <li>未運作三日</li>
+                        <li>公會長期未招募到新會員</li>
+                        <li>經全體會員一致同意</li>
+                        <li>主管單位之命令</li>
+                        <li>觸犯第8條第1項、第9條、第10條第1項、第11條第1項、第14條第1項</li>
+                    </ol>
+                </li>
+                <li>公會合併或解散（除第16條第4項），因向主管單位報備之</li>
+                <li>公會合併或解散，因通知其公會會員</li>
+                <li>公會合併或解散，應讓其公會會員自由決定其去向，不得強制公會會員加入或退出其新公會</li>
+                <li>新成立之公會，因向主管單位重新申請</li>
+            </ol>
+        </div>
+
+        <h2>第五章：職業公會</h2>
+        <div class="article">
+            <ol start="24">
+                <li>職業公會為相同職業、互相合作之公會</li>
+            </ol>
+        </div>
+
+        <h2>第六章：合作公會</h2>
+        <div class="article">
+            <ol start="25">
+                <li>合作公會為一地區之玩家相互扶持、合作之公會</li>
+            </ol>
+        </div>
+
+        <h2>第七章：政府公會</h2>
+        <div class="article">
+            <ol start="26">
+                <li>政府公會為政府人員參與、資助之公會</li>
+                <li>政府公會之成立適用本法第二章之規定</li>
+            </ol>
+        </div>
+
+        <h2>第八章：附則</h2>
+        <div class="article">
+            <ol start="28">
+                <li>本法自公布時施行</li>
+                <li>本法公布前成立之公會，不溯及既往</li>
+                <li>本法由最高裁判所解釋及修改之</li>
+            </ol>
+        </div>
+    </section>
+    <button onclick="copyText()">複製條文</button>
+    <p id="copyMessage">條文已複製！</p>
+</body>
+</html>

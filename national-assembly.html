@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服民議會法</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .article {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 5px 20px; /* 調整按鈕大小，讓它更長一點 */
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8em; /* 調整字體大小 */
+            position: fixed; /* 固定位置 */
+            top: 20px; /* 距離上方20px */
+            right: 20px; /* 距離右側20px */
+            border-radius: 50px; /* 使按鈕成為橢圓形，數值越大形狀越圓 */
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #copyMessage {
+            color: green;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+    <script>
+        function copyText() {
+            // 選取指定的內容區域
+            var content = document.getElementById('contentToCopy').innerText;
+
+            // 建立一個暫時的文本區域來進行複製
+            var tempInput = document.createElement('textarea');
+            tempInput.value = content;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // 兼容移動設備
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            // 顯示複製成功的訊息
+            var copyMessage = document.getElementById('copyMessage');
+            copyMessage.style.display = 'block';
+
+            // 2秒後隱藏提示訊息
+            setTimeout(function() {
+                copyMessage.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <h1>服民議會法</h1>
+
+    <section id="contentToCopy">
+        <h2>用詞</h2>
+        <p>1. <strong>本服</strong>：指維爾多mc伺服器，以下簡稱為本服。</p>
+        <p>2. <strong>草案</strong>：指欲提交至議會審議之文件。</p>
+
+        <h2>第一章：目的</h2>
+        <div class="article">
+            <h3>第一條</h3>
+            <p>為促進本服之經濟、社會及文化發展，並增強伺服器玩家對公共事務的參與，特訂立本法。</p>
+        </div>
+        <div class="article">
+            <h3>第二條</h3>
+            <p>凡具有本服玩家身份且無重大違規紀錄之玩家，皆有權利參選議員。</p>
+        </div>
+        <div class="article">
+            <h3>第三條</h3>
+            <p>凡合法玩家組織皆可提名代表其組織之候選人參選議員。</p>
+        </div>
+
+        <h2>第二章：議會組織架構</h2>
+        <div class="article">
+            <h3>第一條</h3>
+            <ol>
+                <li>本服議會由15名議員組成。</li>
+                <li>具有「管理員身份」的議員，其人數不得超過該屆總議員數的½（即7人）。</li>
+                <li>若選舉結果顯示具有管理員身份的議員超過總議員數的½，須根據得票順序刪減至不超過總議員數的½。</li>
+            </ol>
+        </div>
+        <div class="article">
+            <h3>第二條</h3>
+            <p>本服議會院長由全體議員互相選舉產生，院長提名副院長，並由全體議員表決通過後擔任。</p>
+        </div>
+
+        <h2>第三章：提案程序</h2>
+        <div class="article">
+            <h3>第一條</h3>
+            <p>無組織或有組織之議員可依個人意願提出草案，其流程如下：</p>
+            <ol>
+                <li>撰寫草案，內容須包含草案名稱、撰寫人、提出理由及具體內容。</li>
+                <li>以電子檔形式將草案提交至議會。</li>
+                <li>由議會進行審查並進行投票。</li>
+                <li>若投票同意達出席議員的半數，由管理員負責公告並實施。</li>
+            </ol>
+        </div>
+        <div class="article">
+            <h3>第二條</h3>
+            <p>有組織議員可通過其所屬組織提出草案，其流程如下：</p>
+            <ol>
+                <li>撰寫草案，內容須包含草案名稱、撰寫人、提出理由及具體內容。</li>
+                <li>草案須經所屬組織內部審議及投票。</li>
+                <li>通過後以電子檔形式提交至議會。</li>
+                <li>由議會進行審查並進行投票。</li>
+                <li>若投票同意達出席議員的半數，由管理員負責公告並實施。</li>
+            </ol>
+        </div>
+        <div class="article">
+            <h3>第三條</h3>
+            <p>所有草案均須符合本服現行規定。</p>
+        </div>
+
+        <h2>第四章：法案與議員行為監督</h2>
+        <div class="article">
+            <h3>第一條</h3>
+            <p>若議會通過之法案遭遇重大質疑，管理層可透過管理員投票來決定該法案的存續與否，但必須列明具體理由及相關證據。</p>
+        </div>
+        <div class="article">
+            <h3>第二條</h3>
+            <p>若議員在任期間違規，管理層有權根據事實和情況，決定是否啟動撤職程序。撤職程序需經由議會內部投票通過。</p>
+        </div>
+        <div class="article">
+            <h3>第三條</h3>
+            <p>若玩家對議會運作或政策有建議或意見，皆可向任何議員提出請願，議員有義務回應並於議會討論此類請願事項。</p>
+        </div>
+        <div class="article">
+            <h3>第四條</h3>
+            <p>出席率需達½方可開議。</p>
+        </div>
+    </section>
+
+    <!-- 複製按鈕 -->
+    <button onclick="copyText()">複製條文內容</button>
+    <p id="copyMessage">內容已複製！</p>
+
+</body>
+</html>
