@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>維爾多銀行完成重建</title>
+    <link rel="stylesheet" href="css/blog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W49DBFB1S5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W49DBFB1S5');
+</script>
+
+<body>
+    <div class="blog-container">
+        <!-- Header Section -->
+        <header class="blog-header">
+            <h1>維爾多銀行完成重建</h1>
+            <div class="blog-meta">
+                <div>
+                    <span>2024-10-05</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Blog Content -->
+        <main class="blog-content">
+            <p>
+                維爾多銀行曾於8/18經歷火災重創，經歷近一個月的停業，於9/1由交通省大臣陳公規劃並完成重建工程，銀行現已恢復正常運行。
+            </p>
+            
+            <!-- Multiple images displayed side by side -->
+            <div class="image-gallery">
+                <div class="image-item">
+                    <img src="images/ai-application.jpg" alt="AI Application" class="clickable">
+                </div>
+                <div class="image-item">
+                    <img src="images/ai-robotics.jpg" alt="AI Robotics" class="clickable">
+                </div>
+                <div class="image-item">
+                    <img src="images/ai-healthcare.jpg" alt="AI in Healthcare" class="clickable">
+                </div>
+                <div class="image-item">
+                    <img src="images/ai-application.jpg" alt="AI Application" class="clickable">
+                </div>
+                <div class="image-item">
+                    <img src="images/ai-robotics.jpg" alt="AI Robotics" class="clickable">
+                </div>
+                <div class="image-item">
+                    <img src="images/ai-healthcare.jpg" alt="AI in Healthcare" class="clickable">
+                </div>
+                <div class="image-item">
+                    <img src="images/ai-application.jpg" alt="AI Application" class="clickable">
+                </div>
+                <div class="image-item">
+                    <img src="images/ai-robotics.jpg" alt="AI Robotics" class="clickable">
+                </div>
+                <div class="image-item">
+                    <img src="images/ai-healthcare.jpg" alt="AI in Healthcare" class="clickable">
+                </div>
+            </div>
+
+            <p>
+                他是真的臭甲
+            </p>
+            <blockquote>
+                王慧喬："我是臭甲"
+            </blockquote>
+            <p>
+                As AI continues to evolve, ethical considerations must remain at the forefront. Addressing issues 
+                such as data privacy, algorithmic bias, and transparency will be crucial for building a responsible 
+                AI-powered future.
+            </p>
+        </main>
+
+        <!-- Back Link -->
+        <div class="blog-back">
+            <a href="index.html"><i class="fa fa-arrow-left"></i> Back to Blogs</a>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden">
+        <span id="close-btn" class="close-btn">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <!-- Inline JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('close-btn');
+
+            // Handle image click
+            document.querySelectorAll('.clickable').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.classList.remove('hidden'); // Show lightbox
+                    lightboxImg.src = img.src; // Set clicked image as lightbox image
+                });
+            });
+
+            // Handle close button click
+            closeBtn.addEventListener('click', () => {
+                lightbox.classList.add('hidden'); // Hide lightbox
+            });
+
+            // Close lightbox on clicking outside the image
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.add('hidden'); // Hide lightbox
+                }
+            });
+        });
+    </script>
+</body>
+</html>
