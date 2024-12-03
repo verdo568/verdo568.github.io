@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>臭甲名單</title>
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/lightbox.css"> <!-- 獨立 Lightbox 的樣式 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 
@@ -45,13 +46,13 @@
             <!-- Multiple images displayed side by side -->
             <div class="image-gallery">
                 <div class="image-item">
-                    <img src="images/ai-application.jpg" alt="AI Application">
+                    <img src="images/ai-application.jpg" alt="AI Application" class="clickable">
                 </div>
                 <div class="image-item">
-                    <img src="images/ai-robotics.jpg" alt="AI Robotics">
+                    <img src="images/ai-robotics.jpg" alt="AI Robotics" class="clickable">
                 </div>
                 <div class="image-item">
-                    <img src="images/ai-healthcare.jpg" alt="AI in Healthcare">
+                    <img src="images/ai-healthcare.jpg" alt="AI in Healthcare" class="clickable">
                 </div>
             </div>
 
@@ -73,5 +74,40 @@
             <a href="index.html"><i class="fa fa-arrow-left"></i> Back to Blogs</a>
         </div>
     </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden">
+        <span id="close-btn" class="close-btn">&times;</span>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Expanded Image">
+    </div>
+
+    <!-- Inline JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('close-btn');
+
+            // Handle image click
+            document.querySelectorAll('.clickable').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.classList.remove('hidden'); // Show lightbox
+                    lightboxImg.src = img.src; // Set clicked image as lightbox image
+                });
+            });
+
+            // Handle close button click
+            closeBtn.addEventListener('click', () => {
+                lightbox.classList.add('hidden'); // Hide lightbox
+            });
+
+            // Close lightbox on clicking outside the image
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.classList.add('hidden'); // Hide lightbox
+                }
+            });
+        });
+    </script>
 </body>
 </html>
