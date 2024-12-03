@@ -10,7 +10,7 @@ body {
 
 /* Blog Container */
 .blog-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
@@ -82,8 +82,8 @@ body {
 }
 
 .image-item {
-    flex: 1 1 calc(33.33% - 20px); /* Three items per row */
-    max-width: calc(33.33% - 20px); /* Limit max width */
+    flex: 1 1 calc(25% - 20px); /* Three items per row */
+    max-width: calc(25% - 20px); /* Limit max width */
     box-sizing: border-box; /* Include padding/border in width */
 }
 
