@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html-->
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -14,47 +14,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--==Font-Awesome=================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <style>
-        /* Lightbox Styles */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-
-        .lightbox.hidden {
-            display: none;
-        }
-
-        .lightbox-img {
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 30px;
-            color: #fff;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close-btn:hover {
-            color: #ff0000;
-        }
-    </style>
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W49DBFB1S5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W49DBFB1S5');
+</script>
 
 <body>
 
@@ -72,8 +42,8 @@
             <div class="blog-box">
                 <!--img-->
                 <div class="blog-box-img">
-                    <img alt="blog" src="images/b2.jpg" class="clickable">
-                    <a href="#" class="blog-img-link">
+                    <img alt="blog" src="images/b2.jpg">
+                    <a href="blog-detail.html" class="blog-img-link">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -81,7 +51,7 @@
                 <div class="blog-box-text">
                     <strong>維爾多臭甲</strong>
                     <a href="national-assembly.html">論誰是臭甲</a>
-                    <p>王慧喬是臭甲，王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲</p>
+                    <p>王慧喬是臭甲，王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲王慧喬是臭甲</p>
                     <div class="blog-author">
                         <div class="blog-author-img">
                             <img alt="" src="images/b2.jpg">
@@ -98,7 +68,7 @@
             <div class="blog-box">
                 <!--img-->
                 <div class="blog-box-img">
-                    <img alt="blog" src="images/b3.jpg" class="clickable">
+                    <img alt="blog" src="images/b3.jpg">
                     <a href="#" class="blog-img-link">
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
@@ -119,43 +89,37 @@
                     </div>
                 </div>
             </div><!--box-end-->
+
+
+            <!-- **box** -->
+            <div class="blog-box">
+                <!--img-->
+                <div class="blog-box-img">
+                    <img alt="blog" src="images/b1.jpg">
+                    <a href="#" class="blog-img-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <!--text-->
+                <div class="blog-box-text">
+                    <strong>Artificial Intelligence</strong>
+                    <a href="#">Artificial Intelligence, What It Is and How It Is Used</a>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam explicabo ex, quia sapiente totam itaque et atque neque quis cumque minus molestiae, alias, perspiciatis dolorum excepturi rerum magni possimus veniam.</p>
+                    <div class="blog-author">
+                        <div class="blog-author-img">
+                            <img alt="" src="images/b1.jpg">
+                        </div>
+                        <div class="blog-author-text">
+                            <strong>Alax</strong>
+                            <span>Jan 12, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!--box-end-->
         
         </div>
     
     </section>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox hidden">
-        <span id="close-btn" class="close-btn">&times;</span>
-        <img id="lightbox-img" class="lightbox-img" src="" alt="Expanded Image">
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            const closeBtn = document.getElementById('close-btn');
-
-            // Handle image click
-            document.querySelectorAll('.clickable').forEach(img => {
-                img.addEventListener('click', () => {
-                    lightbox.classList.remove('hidden'); // Show lightbox
-                    lightboxImg.src = img.src; // Set clicked image as lightbox image
-                });
-            });
-
-            // Handle close button click
-            closeBtn.addEventListener('click', () => {
-                lightbox.classList.add('hidden'); // Hide lightbox
-            });
-
-            // Close lightbox on clicking outside the image
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) {
-                    lightbox.classList.add('hidden'); // Hide lightbox
-                }
-            });
-        });
-    </script>
 </body>
 </html>
