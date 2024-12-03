@@ -10,7 +10,7 @@ body {
 
 /* Blog Container */
 .blog-container {
-    max-width: 1000px;
+    max-width: 900px;
     margin: 20px auto;
     padding: 20px;
     background: #fff;
