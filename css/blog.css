@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+            margin: 0;
+                padding: 0;
+                    color: #333;
+                        background-color: #f9f9f9;
+                        }
+
+                        /* Blog Container */
+                        .blog-container {
+                            max-width: 800px;
+                                margin: 20px auto;
+                                    padding: 20px;
+                                        background: #fff;
+                                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                                border-radius: 8px;
+                                                    overflow: hidden;
+                                                    }
+
+                                                    /* Header */
+                                                    .blog-header {
+                                                        text-align: center;
+                                                            margin-bottom: 20px;
+                                                            }
+
+                                                            .blog-header h1 {
+                                                                font-size: 28px;
+                                                                    color: #222;
+                                                                        margin-bottom: 10px;
+                                                                        }
+
+                                                                        .blog-meta {
+                                                                            display: flex;
+                                                                                align-items: center;
+                                                                                    justify-content: center;
+                                                                                        gap: 10px;
+                                                                                            font-size: 14px;
+                                                                                                color: #666;
+                                                                                                }
+
+                                                                                                .author-img {
+                                                                                                    width: 40px;
+                                                                                                        height: 40px;
+                                                                                                            border-radius: 50%;
+                                                                                                                object-fit: cover;
+                                                                                                                }
+
+                                                                                                                /* Banner Image */
+                                                                                                                .blog-banner img {
+                                                                                                                    width: 100%;
+                                                                                                                        height: auto;
+                                                                                                                            border-radius: 8px;
+                                                                                                                                margin-bottom: 20px;
+                                                                                                                                }
+
+                                                                                                                                /* Blog Content */
+                                                                                                                                .blog-content {
+                                                                                                                                    font-size: 16px;
+                                                                                                                                        color: #444;
+                                                                                                                                            margin-bottom: 20px;
+                                                                                                                                                line-height: 1.8;
+                                                                                                                                                }
+
+                                                                                                                                                .blog-content blockquote {
+                                                                                                                                                    font-size: 18px;
+                                                                                                                                                        font-style: italic;
+                                                                                                                                                            color: #555;
+                                                                                                                                                                background: #f2f2f2;
+                                                                                                                                                                    padding: 10px 20px;
+                                                                                                                                                                        border-left: 4px solid #333;
+                                                                                                                                                                            margin: 20px 0;
+                                                                                                                                                                            }
+
+                                                                                                                                                                            /* Image Gallery - Flexbox for inline display */
+                                                                                                                                                                            .image-gallery {
+                                                                                                                                                                                display: flex;
+                                                                                                                                                                                    gap: 20px;
+                                                                                                                                                                                        margin-bottom: 20px;
+                                                                                                                                                                                        }
+
+                                                                                                                                                                                        .image-item {
+                                                                                                                                                                                            flex: 1;
+                                                                                                                                                                                            }
+
+                                                                                                                                                                                            .image-item img {
+                                                                                                                                                                                                width: 100%;
+                                                                                                                                                                                                    height: auto;
+                                                                                                                                                                                                        border-radius: 8px;
+                                                                                                                                                                                                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                                                                                                                                                                                                transition: transform 0.3s ease; /* Smooth transition effect */
+                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                .image-item img:hover {
+                                                                                                                                                                                                                    transform: scale(1.05); /* Zoom-in effect on hover */
+                                                                                                                                                                                                                        transition: transform 0.3s ease;
+                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                        /* Back Link */
+                                                                                                                                                                                                                        .blog-back {
+                                                                                                                                                                                                                            text-align: center;
+                                                                                                                                                                                                                                margin-top: 20px;
+                                                                                                                                                                                                                                }
+
+                                                                                                                                                                                                                                .blog-back a {
+                                                                                                                                                                                                                                    text-decoration: none;
+                                                                                                                                                                                                                                        color: #007bff;
+                                                                                                                                                                                                                                            font-size: 16px;
+                                                                                                                                                                                                                                                display: inline-flex;
+                                                                                                                                                                                                                                                    align-items: center;
+                                                                                                                                                                                                                                                        gap: 5px;
+                                                                                                                                                                                                                                                        }
+
+                                                                                                                                                                                                                                                        .blog-back a:hover {
+                                                                                                                                                                                                                                                            color: #0056b3;
+                                                                                                                                                                                                                                                            }
