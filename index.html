@@ -41,9 +41,11 @@
         blogBoxes.forEach(box => {
             const title = box.querySelector('a');
             const content = box.querySelector('p');
+            const date = box.querySelector('.blog-author span');  // 取得日期元素
+            const author = box.querySelector('.blog-author strong');  // 取得作者名稱（Admin）
 
             // 清除之前的高亮
-            [title, content].forEach(element => {
+            [title, content, date, author].forEach(element => {
                 if (element) {
                     element.innerHTML = element.textContent; // 恢復原始內容
                 }
@@ -63,6 +65,20 @@
             if (content && content.textContent.toLowerCase().includes(query)) {
                 const regex = new RegExp(query, 'gi');
                 content.innerHTML = content.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
+                found = true;
+            }
+
+            // 日期
+            if (date && date.textContent.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                date.innerHTML = date.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
+                found = true;
+            }
+
+            // 作者名稱（Admin）
+            if (author && author.textContent.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                author.innerHTML = author.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
                 found = true;
             }
 
@@ -88,6 +104,8 @@
         });
     });
 </script>
+
+
 
 <body>
 
@@ -212,7 +230,7 @@
                     </div>
                 </div>
             </div><!--box-end-->
-        
+            
         
         </div>
     
