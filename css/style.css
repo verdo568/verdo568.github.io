@@ -179,6 +179,14 @@ ul {
     font-weight: 500;
 }
 
+
+footer {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f9f8ff;
+}
+
 /*========================= 新增詳細頁面樣式 ========================*/
 
 .blog-container {
