@@ -26,6 +26,70 @@
   gtag('config', 'G-W49DBFB1S5');
 </script>
 
+<script>
+    function searchBlog() {
+        const query = document.getElementById('searchInput').value.trim().toLowerCase(); // 使用 trim() 去除空白
+        const blogBoxes = document.querySelectorAll('.blog-box');
+        const highlightClass = 'highlight';
+
+        // 如果搜尋框為空，跳轉到 index.html
+        if (!query) {
+            window.location.href = 'index.html';
+            return; // 結束函數執行
+        }
+
+        blogBoxes.forEach(box => {
+            const title = box.querySelector('a');
+            const content = box.querySelector('p');
+
+            // 清除之前的高亮
+            [title, content].forEach(element => {
+                if (element) {
+                    element.innerHTML = element.textContent; // 恢復原始內容
+                }
+            });
+
+            // 搜尋與高亮
+            let found = false;
+
+            // 標題
+            if (title && title.textContent.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                title.innerHTML = title.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
+                found = true;
+            }
+
+            // 內容
+            if (content && content.textContent.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                content.innerHTML = content.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
+                found = true;
+            }
+
+            // 隱藏不符合的文章
+            box.style.display = found ? 'block' : 'none';
+        });
+    }
+
+    function clearSearch() {
+        // 清空搜尋框內容
+        document.getElementById('searchInput').value = '';
+
+        // 跳轉回首頁
+        window.location.href = 'index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // 為搜尋框添加 ENTER 鍵觸發事件
+        document.getElementById('searchInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                searchBlog(); // 按下 ENTER 鍵時執行搜尋
+            }
+        });
+    });
+</script>
+
+
 <body>
 
     <!--==Blog================================-->
@@ -34,6 +98,12 @@
         <div class="blog-heading">
             <h3>維爾多部落格</h3>
         </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="輸入關鍵字搜尋...">
+            <button id="searchButton" onclick="searchBlog()">搜尋</button>
+            <button id="clearButton" onclick="clearSearch()">清除</button>
+        </div>
+        
 
         <!--**container**************-->
         <div class="blog-box-container">
