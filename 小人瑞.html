@@ -79,13 +79,12 @@
 
             // Handle close button click
             closeBtn.addEventListener('click', () => {
-                lightbox.classList.add('hidden'); // Hide lightbox
+                lightbox.classList.add('hidden'); 
             });
 
-            // Close lightbox on clicking outside the image
             lightbox.addEventListener('click', (e) => {
                 if (e.target === lightbox) {
-                    lightbox.classList.add('hidden'); // Hide lightbox
+                    lightbox.classList.add('hidden'); 
                 }
             });
         });
