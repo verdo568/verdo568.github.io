@@ -285,20 +285,20 @@ footer {
 }
 
 #searchInput {
-    padding: 10px;
-    width: 300px;
+    padding: 5px;
+    width: 210px;
     border: 1px solid #ccc;
     border-radius: 45px;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #searchButton, #clearButton {
-    padding: 10px 20px;
+    padding: 8px 18px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
 }
 
