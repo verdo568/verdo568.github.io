@@ -281,7 +281,7 @@ footer {
     margin: 20px 0;
     display: flex;
     justify-content: center;
-    gap: 10px;  /* 讓搜尋框與按鈕之間有一些間距 */
+    gap: 10px;  /* 搜尋框與按鈕之間的間距 */
 }
 
 #searchInput {
