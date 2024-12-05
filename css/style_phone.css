@@ -110,6 +110,11 @@ ul {
     padding: 30px 10px 20px 10px;
 }
 
+.blog-box-text-unimg {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 20px 10px;
+}
 
 .blog-box-text strong, .blog-box-text p {
     color: #797979;
@@ -125,6 +130,13 @@ ul {
     margin: 5px 0px 10px 0px;
 }
 
+.blog-box-text-unimg a {
+    font-size: 1.4rem;
+    color: #252525;
+    font-weight: 800;
+    line-height: 1.8rem;
+    margin: 5px 0px 10px 0px;
+}
 
 @keyframes fade {
     0% {
@@ -143,6 +155,13 @@ ul {
     -webkit-box-orient: vertical;
 }
 
+.blog-box-text-unimg p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
 
 .blog-author {
     display: flex;
@@ -289,7 +308,7 @@ footer {
 
 #searchInput {
     padding: 5px;
-    width: 300px;
+    width: 210px;
     border: 1px solid #ccc;
     border-radius: 45px;
     font-size: 15px;
