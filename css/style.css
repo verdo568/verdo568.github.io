@@ -302,7 +302,7 @@ footer {
     border: none;
     border-radius: 45px;
     font-size: 20px;
-    cursor: pointer; /*按鈕大小*/
+    cursor: pointer; /*按鈕*/
 }
 
 #searchButton:hover, #clearButton:hover {
