@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部落格</title>
+    <!-- Poppins 字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<!-- Google Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W49DBFB1S5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W49DBFB1S5');
+</script>
+
+<script>
+    function searchBlog() {
+        const query = document.getElementById('searchInput').value.trim().toLowerCase();
+        const blogBoxes = document.querySelectorAll('.blog-box');
+        const highlightClass = 'highlight';
+
+        if (!query) {
+            window.location.href = 'index.html';
+            return;
+        }
+
+        blogBoxes.forEach(box => {
+            const title = box.querySelector('a');
+            const content = box.querySelector('p');
+            const date = box.querySelector('.blog-author span');
+            const author = box.querySelector('.blog-author strong');
+
+            [title, content, date, author].forEach(element => {
+                if (element) {
+                    element.innerHTML = element.textContent;
+                }
+            });
+
+            let found = false;
+            if (title && title.textContent.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                title.innerHTML = title.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
+                found = true;
+            }
+            if (content && content.textContent.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                content.innerHTML = content.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
+                found = true;
+            }
+            if (date && date.textContent.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                date.innerHTML = date.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
+                found = true;
+            }
+            if (author && author.textContent.toLowerCase().includes(query)) {
+                const regex = new RegExp(query, 'gi');
+                author.innerHTML = author.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
+                found = true;
+            }
+            box.style.display = found ? 'block' : 'none';
+        });
+    }
+
+    function clearSearch() {
+        document.getElementById('searchInput').value = '';
+        window.location.href = 'index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('searchInput').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                searchBlog();
+            }
+        });
+    });
+</script>
+
+<body>
+    <section id="blog">
+        <div class="blog-heading">
+            <h3>維爾多部落格</h3>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="輸入關鍵字搜尋...">
+            <button id="searchButton" onclick="searchBlog()">搜尋</button>
+            <button id="clearButton" onclick="clearSearch()">清除</button>
+        </div>
+
+        <div class="blog-box-container">
+            <div class="blog-box">
+                <div class="blog-box-img">
+                    <img alt="image" src="images/pngtree-ordinary-pure-white-background-image_396590.jpg">
+                    <a href="blogs/sample1.html" class="blog-img-link">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <div class="blog-box-text">
+                    <a href="blogs/sample1.html">文章標題範例</a>
+                    <p>這是範例文章內容摘要。</p>
+                    <div class="blog-author">
+                        <div class="blog-author-text">
+                            <strong>Admin</strong>
+                            <span>2024-12-04</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
