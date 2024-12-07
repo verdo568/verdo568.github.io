@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,10 @@
             var userAgent = navigator.userAgent;
 
             // 檢查是否是手機或平板
-            if (/Android|iPhone|iPad|iPod|Windows Phone/i.test(userAgent)) {
+            if (/Android|iPhone|iPad/i.test(userAgent)) {
                 window.location.href = "home_phone.html";
             } 	
-		else {
+		    else {
                 window.location.href = "home_web.html";
             }
         }
