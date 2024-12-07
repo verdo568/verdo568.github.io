@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>裝置判斷與跳轉</title>
+    <title>正在跳轉網頁</title>
     <script>
         window.onload = function() {
-            // 判斷用戶設備的 User-Agent
             var userAgent = navigator.userAgent;
 
             // 檢查是否是手機或平板
             if (/Android|iPhone|iPad|iPod|Windows Phone/i.test(userAgent)) {
-                // 如果是手機或平板，跳轉到 a.html
                 window.location.href = "home_phone.html";
             } else {
-                // 如果是電腦或 Mac，跳轉到 b.html
                 window.location.href = "home_web.html";
             }
         }
