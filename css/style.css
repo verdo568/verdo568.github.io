@@ -37,6 +37,13 @@ ul {
     letter-spacing: 0.3px;
 }
 
+.blog-heading a {
+    color:	#696969;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
 .blog-box-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -188,8 +195,6 @@ footer {
     padding: 20px 0;
     background-color: #f9f8ff;
 }
-
-/*========================= 新增詳細頁面樣式 ========================*/
 
 .blog-container {
     max-width: 800px;
