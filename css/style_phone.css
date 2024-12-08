@@ -13,7 +13,6 @@ ul {
     list-style: none;
 }
 
-/*==blog========================*/
 #blog {
     display: flex;
     flex-direction: column;
@@ -33,6 +32,13 @@ ul {
 
 .blog-heading strong {
     color: #0a0ef8;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.blog-heading a {
+    color:	#696969;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.3px;
@@ -201,15 +207,12 @@ ul {
     font-weight: 500;
 }
 
-
 footer {
     font-size: 0.9em;
     text-align: center;
     padding: 20px 0;
     background-color: #f9f8ff;
 }
-
-/*========================= 新增詳細頁面樣式 ========================*/
 
 .blog-container {
     max-width: 800px;
@@ -278,8 +281,6 @@ footer {
     color: #0056b3;
 }
 
-/*==響應式設計========================*/
-
 @media (max-width: 920px) {
     .blog-box-container {
         grid-template-columns: 1fr 1fr;
@@ -303,7 +304,7 @@ footer {
     margin: 20px 0;
     display: flex;
     justify-content: center;
-    gap: 10px;  /* 搜尋框與按鈕之間的間距 */
+    gap: 10px;
 }
 
 #searchInput {
@@ -321,7 +322,7 @@ footer {
     border: none;
     border-radius: 45px;
     font-size: 17px;
-    cursor: pointer; /*按鈕大小*/
+    cursor: pointer;
 }
 
 #searchButton:hover, #clearButton:hover {
@@ -329,11 +330,11 @@ footer {
 }
 
 #clearButton {
-    background-color: #f44336; /* 紅色背景 */
+    background-color: #f44336;
 }
 
 #clearButton:hover {
-    background-color: #d32f2f; /* 深紅色背景 */
+    background-color: #d32f2f; 
 }
 
 .highlight {

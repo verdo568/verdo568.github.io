@@ -13,7 +13,6 @@ ul {
     list-style: none;
 }
 
-/*==blog========================*/
 #blog {
     display: flex;
     flex-direction: column;
@@ -259,8 +258,6 @@ footer {
     color: #0056b3;
 }
 
-/*==響應式設計========================*/
-
 @media (max-width: 920px) {
     .blog-box-container {
         grid-template-columns: 1fr 1fr;
@@ -284,7 +281,7 @@ footer {
     margin: 20px 0;
     display: flex;
     justify-content: center;
-    gap: 10px;  /* 搜尋框與按鈕之間的間距 */
+    gap: 10px;
 }
 
 #searchInput {
@@ -302,7 +299,7 @@ footer {
     border: none;
     border-radius: 45px;
     font-size: 20px;
-    cursor: pointer; /*按鈕*/
+    cursor: pointer;
 }
 
 #searchButton:hover, #clearButton:hover {
@@ -310,11 +307,11 @@ footer {
 }
 
 #clearButton {
-    background-color: #f44336; /* 紅色背景 */
+    background-color: #f44336; 
 }
 
 #clearButton:hover {
-    background-color: #d32f2f; /* 深紅色背景 */
+    background-color: #d32f2f;
 }
 
 .highlight {

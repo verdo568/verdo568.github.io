@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--==Title========================-->
     <title>部落格</title>
-    <!--==CSS==========================-->
-    <link rel="stylesheet" href="css/style_phone.css">
-    <!--==Poppins======================-->
+    <link rel="stylesheet" href="css\style_phone.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!--==Font-Awesome=================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
@@ -28,79 +24,65 @@
 
 <script>
     function searchBlog() {
-        const query = document.getElementById('searchInput').value.trim().toLowerCase(); // 使用 trim() 去除空白
+        const query = document.getElementById('searchInput').value.trim().toLowerCase();
         const blogBoxes = document.querySelectorAll('.blog-box');
         const highlightClass = 'highlight';
 
-        // 如果搜尋框為空，跳轉到 index.html
         if (!query) {
             window.location.href = 'index.html';
-            return; // 結束函數執行
+            return; 
         }
 
         blogBoxes.forEach(box => {
             const title = box.querySelector('a');
             const content = box.querySelector('p');
-            const date = box.querySelector('.blog-author span');  // 取得日期元素
-            const author = box.querySelector('.blog-author strong');  // 取得作者名稱（Admin）
-
-            // 清除之前的高亮
+            const date = box.querySelector('.blog-author span'); 
+            const author = box.querySelector('.blog-author strong');  
             [title, content, date, author].forEach(element => {
                 if (element) {
-                    element.innerHTML = element.textContent; // 恢復原始內容
+                    element.innerHTML = element.textContent; 
                 }
             });
 
-            // 搜尋與高亮
             let found = false;
 
-            // 標題
             if (title && title.textContent.toLowerCase().includes(query)) {
                 const regex = new RegExp(query, 'gi');
                 title.innerHTML = title.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
                 found = true;
             }
 
-            // 內容
             if (content && content.textContent.toLowerCase().includes(query)) {
                 const regex = new RegExp(query, 'gi');
                 content.innerHTML = content.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
                 found = true;
             }
 
-            // 日期
             if (date && date.textContent.toLowerCase().includes(query)) {
                 const regex = new RegExp(query, 'gi');
                 date.innerHTML = date.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
                 found = true;
             }
 
-            // 作者名稱（Admin）
             if (author && author.textContent.toLowerCase().includes(query)) {
                 const regex = new RegExp(query, 'gi');
                 author.innerHTML = author.textContent.replace(regex, match => `<span class="${highlightClass}">${match}</span>`);
                 found = true;
             }
 
-            // 隱藏不符合的文章
             box.style.display = found ? 'block' : 'none';
         });
     }
 
     function clearSearch() {
-        // 清空搜尋框內容
         document.getElementById('searchInput').value = '';
 
-        // 跳轉回首頁
         window.location.href = 'index.html';
     }
 </script>
 
 <body>
-
-    <!--==Blog================================-->
     <section id="blog">
-
         <div class="blog-heading">
             <h3>維爾多部落格</h3>
             <a href="投稿表單.html">點我投稿</a>
@@ -110,9 +92,7 @@
             <button id="searchButton" onclick="searchBlog()">搜尋</button>
             <button id="clearButton" onclick="clearSearch()">清除</button>
         </div>
-        
 
-        <!--**container**************-->
         <div class="blog-box-container">
             <!-- **box** -->
             <div class="blog-box">
@@ -248,10 +228,7 @@
                     </div>
                 </div>
             </div><!--box-end-->
-            
-        
         </div>
-    
     </section>
     <footer>
         Copyright © 2024 維爾多版權所有
