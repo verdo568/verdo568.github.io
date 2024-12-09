@@ -71,6 +71,10 @@
             <textarea id="content" placeholder="輸入網頁主要內容"></textarea>
         </div>
         <div class="form-group">
+            <label for="date">日期 (格式：YYYY-MM-DD)</label>
+            <input type="text" id="date" placeholder="如果留空，將自動填入當前日期">
+        </div>
+        <div class="form-group">
             <label for="images">圖片檔名 (用逗號分隔)</label>
             <input type="text" id="images" placeholder="例如：image1.png,image2.png">
         </div>
@@ -85,10 +89,21 @@
     </div>
 
     <script>
+        // 工具函數：取得當地日期 (YYYY-MM-DD)
+        function getLocalDate() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
         // 生成程式碼按鈕功能
         document.getElementById('generateButton').addEventListener('click', function() {
             const title = document.getElementById('title').value;
             const content = document.getElementById('content').value;
+            const dateInput = document.getElementById('date').value.trim();
+            const date = dateInput || getLocalDate(); // 如果日期為空，使用當地日期
             const imagesInput = document.getElementById('images').value;
 
             let imageGallery = '';
@@ -125,7 +140,7 @@
             <h1>${title}</h1>
             <div class="blog-meta">
                 <div>
-                    <span>${new Date().toISOString().split('T')[0]}</span>
+                    <span>${date}</span>
                 </div>
             </div>
         </header>
