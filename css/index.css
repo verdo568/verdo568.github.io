@@ -392,6 +392,8 @@ picutre {
 @media (min-width: 35em) {
   .primary-navigation {
     padding-inline: clamp(3rem, 7vw, 7rem);
+    text-orientation: mixed; 
+    white-space: nowrap;
   }
 }
 @media (min-width: 35em) and (max-width: 44.999em) {
