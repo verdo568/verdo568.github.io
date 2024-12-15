@@ -68,6 +68,51 @@ body {
   overflow-x: hidden;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(51, 51, 51, 0.85);
+  padding: 0.5rem;
+  list-style: none;
+  border-radius: 10px;
+  text-align: center; 
+}
+
+.dropdown-menu li {
+  margin: 0.5rem 0;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+  font-size: 17px; /* 設置字體大小，您可以根據需求調整 */
+  border-radius: 10px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background-color: #555;
+  color: #fff;
+}
+
+.dropdown-menu a:active {
+  background-color: #444;
+}
+
+.dropdown-menu[data-visible="true"] {
+  display: block;
+}
+
 /* make images easier to work with */
 img,
 picutre {
