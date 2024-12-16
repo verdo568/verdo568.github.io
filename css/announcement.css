@@ -1,9 +1,7 @@
-/* 增加首頁與公告欄位間距 */
 header + .announcement-container {
-    margin-top: 20px; /* 與導覽列分隔 */
+    margin-top: 15px; /* 與導覽列分隔 */
 }
 
-/* 公告欄位樣式維持 */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -12,11 +10,13 @@ body {
 
 .announcement-container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 20px auto; /* 適當的上下外邊距 */
     padding: 20px;
     background-color: #1E1E1E;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-height: 250px; /* 限制最大高度 */
+    overflow-y: auto; 
 }
 
 .announcement-header {
