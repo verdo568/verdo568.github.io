@@ -436,9 +436,9 @@ picutre {
 }
 @media (min-width: 35em) {
   .primary-navigation {
-    padding-inline: clamp(3rem, 7vw, 7rem);
-    text-orientation: mixed; 
+    padding-inline: clamp(1rem, 3vw, 7rem);
     white-space: nowrap;
+    width: 86vw;
   }
 }
 @media (min-width: 35em) and (max-width: 44.999em) {
@@ -614,53 +614,53 @@ picutre {
     justify-content: start;
   }
 }
-.crew {
-  background-image: url(../assets/crew/background-crew-mobile.jpg);
+.announcement {
+  background-image: url(../assets/announcement/background-announcement-mobile.jpg);
 }
 
-.grid-container--crew {
+.grid-container--announcement {
   --flow-space: 2rem;
   grid-template-areas: "title" "image" "tabs" "content";
 }
 
-.grid-container--crew > picture {
+.grid-container--announcement > picture {
   grid-area: image;
   max-width: 60%;
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
-.grid-container--crew > .dot-indicators {
+.grid-container--announcement > .dot-indicators {
   grid-area: tabs;
 }
 
-.grid-container--crew > .crew-details {
+.grid-container--announcement > .announcement-details {
   grid-area: content;
 }
 
-.crew-details h2 {
+.announcement-details h2 {
   color: hsla(0, 0%, 100%, 0.5);
 }
 
 @media (min-width: 35em) {
-  .crew {
+  .announcement {
     background-position: center center;
-    background-image: url(../assets/crew/background-crew-tablet.jpg);
+    background-image: url(../assets/announcement/background-announcement-tablet.jpg);
   }
-  .grid-container--crew {
+  .grid-container--announcement {
     padding-bottom: 0;
     grid-template-areas: "title" "content" "tabs" "image";
   }
 }
 @media (min-width: 45em) {
-  .crew {
-    background-image: url(../assets/crew/background-crew-desktop.jpg);
+  .announcement {
+    background-image: url(../assets/announcement/background-announcement-desktop.jpg);
   }
-  .grid-container--crew {
+  .grid-container--announcement {
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
     justify-items: start;
     grid-template-areas: ". title title ." ". content image ." ". tabs image .";
   }
-  .grid-container--crew > picture {
+  .grid-container--announcement > picture {
     grid-column: span 2;
     align-self: start;
     max-width: 50%;
