@@ -1,22 +1,31 @@
-header + .announcement-container {
-    margin-top: 15px; /* 與導覽列分隔 */
-}
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #121212;
     color: #FFFFFF;
 }
 
 .announcement-container {
-    max-width: 800px;
-    margin: 20px auto; /* 適當的上下外邊距 */
+    margin: 20px auto;
     padding: 20px;
     background-color: #1E1E1E;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    max-height: 250px; /* 限制最大高度 */
-    overflow-y: auto; 
+    overflow-y: auto;
+}
+
+/* 普通時候特定樣式 */
+@media (min-width: 800px) {
+    .announcement-container {
+        width: 800px;
+    }
+}
+
+/* 手機時候特定樣式 */
+@media (max-width: 799px) {
+    .announcement-container {
+        width: 100%;
+    }
 }
 
 .announcement-header {

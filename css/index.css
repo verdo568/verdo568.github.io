@@ -442,7 +442,7 @@ picutre {
     width: 86vw;
   }
 }
-@media (min-width: 35em) and (max-width: 44.999em) {
+@media (min-width: 35em) and (max-width: 46em) {
   .primary-navigation a > span {
     display: none;
   }
