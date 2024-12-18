@@ -394,7 +394,7 @@ picutre {
   display: none;
 }
 
-@media (max-width: 35rem) {
+@media (max-width: 45rem) { /*欄位轉換*/
   .primary-navigation {
     --underline-gap: .5rem;
     position: fixed;
@@ -442,7 +442,7 @@ picutre {
     width: 86vw;
   }
 }
-@media (min-width: 35em) and (max-width: 46em) {
+@media (min-width: 35em) and (max-width: 57em) { /*欄位變換*/
   .primary-navigation a > span {
     display: none;
   }
@@ -533,13 +533,13 @@ picutre {
   background-image: url(../assets/home/background-home-mobile.jpg);
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 45rem) {
   .home {
     background-position: center center;
     background-image: url(../assets/home/background-home-tablet.jpg);
   }
 }
-@media (min-width: 45em) {
+@media (min-width: 55em) {
   .home {
     background-image: url(../assets/home/background-home-desktop.jpg);
   }
