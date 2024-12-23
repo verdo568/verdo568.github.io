@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>價格轉換器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #f5ba41;
+        }
+        .price-table, .converter {
+            margin-top: 20px;
+        }
+        .price-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .price-table th, .price-table td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .price-table th {
+            background-color: #333;
+        }
+        .converter label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .converter select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #262626;
+            color: #ffffff;
+        }
+        .converter button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            background-color: #f5ba41;
+            color: #121212;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .converter button:hover {
+            background-color: #ffa31a;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>價格轉換器</h1>
+
+        <div class="price-table">
+            <h2>價格列表</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>價格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>商品 A</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>商品 B</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>商品 C</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>商品 D</td>
+                        <td>100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="converter">
+            <h2>轉換價格</h2>
+            <label for="product1">選擇商品 1：</label>
+            <select id="product1">
+                <option value="5">商品 A - 5</option>
+                <option value="10">商品 B - 10</option>
+                <option value="50">商品 C - 50</option>
+                <option value="100">商品 D - 100</option>
+            </select>
+
+            <label for="product2">選擇商品 2：</label>
+            <select id="product2">
+                <option value="5">商品 A - 5</option>
+                <option value="10">商品 B - 10</option>
+                <option value="50">商品 C - 50</option>
+                <option value="100">商品 D - 100</option>
+            </select>
+
+            <label for="quantity">輸入商品 1 的數量：</label>
+            <input type="number" id="quantity" placeholder="商品 1 的數量" min="1">
+
+            <button onclick="convertPrices()">轉換</button>
+
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function convertPrices() {
+            const price1 = parseFloat(document.getElementById('product1').value);
+            const price2 = parseFloat(document.getElementById('product2').value);
+            const quantity = parseFloat(document.getElementById('quantity').value);
+
+            if (isNaN(price1) || isNaN(price2) || isNaN(quantity) || quantity <= 0) {
+                document.getElementById('result').innerText = '請輸入有效的正數。';
+                return;
+            }
+
+            const equivalentQuantity = (price1 * quantity) / price2;
+
+            document.getElementById('result').innerText = `選擇的商品 1 (${price1}) 的 ${quantity} 單位，相當於約 ${equivalentQuantity.toFixed(2)} 單位的商品 2 (${price2})。`;
+        }
+    </script>
+</body>
+</html>

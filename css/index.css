@@ -394,7 +394,7 @@ picutre {
   display: none;
 }
 
-@media (max-width: 45rem) { /*欄位轉換*/
+@media (max-width: 85rem) { /*欄位轉換*/
   .primary-navigation {
     --underline-gap: .5rem;
     position: fixed;
@@ -435,19 +435,19 @@ picutre {
     outline-offset: 5px;
   }
 }
-@media (min-width: 35em) {
+@media (min-width: 5em) {
   .primary-navigation {
     padding-inline: clamp(1rem, 3vw, 7rem);
     white-space: nowrap;
     width: 86vw;
   }
 }
-@media (min-width: 35em) and (max-width: 57em) { /*欄位變換*/
+@media (min-width: 35em) and (max-width: 5em) { /*欄位變換*/
   .primary-navigation a > span {
     display: none;
   }
 }
-@media (min-width: 45em) {
+@media (min-width: 85em) {
   .primary-header::after {
     content: "";
     display: block;
@@ -539,7 +539,7 @@ picutre {
     background-image: url(../assets/home/background-home-tablet.jpg);
   }
 }
-@media (min-width: 55em) {
+@media (min-width: 45em) {
   .home {
     background-image: url(../assets/home/background-home-desktop.jpg);
   }
