@@ -201,6 +201,45 @@
 
     document.getElementById('currency-result').innerText = `使用 ${amount} 單位的貨幣 1，相當於約 ${result.toFixed(2)} 單位的貨幣 2。`;
 }
+
+function calculateCost() {
+    const itemPrice = document.getElementById('item').value; // 商品價格 (綠寶石)
+    const itemQuantity = parseFloat(document.getElementById('item-quantity').value);
+    const paymentCurrency = document.getElementById('payment-currency').value; // 支付貨幣 (銅/金/綠寶石)
+
+    if (isNaN(itemQuantity) || itemQuantity <= 0) {
+        document.getElementById('item-result').innerText = '請輸入有效的商品數量。';
+        return;
+    }
+
+    if (isNaN(paymentCurrency)) {
+        document.getElementById('item-result').innerText = '請選擇有效的支付貨幣。';
+        return;
+    }
+
+    // 設定商品價格換算比例
+    const itemRates = {
+        "16": { // 遠古遺骸價格
+            "銅": 432,
+            "金": 48,
+            "綠寶石": 16,
+        },
+        "32": { // 獄髓碎片價格
+            "銅": 864,
+            "金": 96,
+            "綠寶石": 32,
+        },
+        "64": { // 獄髓升級模版價格
+            "銅": 1728,
+            "金": 192,
+            "綠寶石": 64,
+        },
+    };
+
+    // 根據選擇的商品和支付貨幣進行計算
+    const totalCost = itemRates[itemPrice][paymentCurrency] * itemQuantity;
+    document.getElementById('item-result').innerText = `購買 ${itemQuantity} 單位的商品需要約 ${totalCost} 單位的選定支付貨幣。`;
+}
     </script>
 </body>
 </html>
