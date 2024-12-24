@@ -165,79 +165,59 @@
     </div>
 
     <script>
-        function convertCurrency() {
-    const currency1 = document.getElementById('currency1').value;
-    const currency2 = document.getElementById('currency2').value;
-    const amount = parseFloat(document.getElementById('currency-amount').value);
-
-    if (isNaN(amount) || amount <= 0) {
-        document.getElementById('currency-result').innerText = '請輸入有效的正數。';
-        return;
-    }
-
-    let result;
-    
-    // 設定貨幣之間的轉換比例
-    const conversionRates = {
-        "銅-金": 9, // 9 銅 = 1 金
-        "金-綠寶石": 3, // 3 金 = 1 綠寶石
-        "綠寶石-銅": 27, // 1 綠寶石 = 27 銅
-    };
-
-    // 根據選擇的貨幣進行轉換計算
-    if (currency1 === "9" && currency2 === "1") {
-        result = amount / conversionRates["綠寶石-銅"]; // 銅轉換為綠寶石
-    } else if (currency1 === "1" && currency2 === "9") {
-        result = amount * conversionRates["綠寶石-銅"]; // 綠寶石轉換為銅
-    } else if (currency1 === "3" && currency2 === "9") {
-        result = amount * conversionRates["銅-金"]; // 金轉換為銅
-    } else if (currency1 === "9" && currency2 === "3") {
-        result = amount / conversionRates["銅-金"]; // 銅轉換為金
-    } else if (currency1 === "1" && currency2 === "3") {
-        result = amount * conversionRates["金-綠寶石"]; // 綠寶石轉換為金
-    } else if (currency1 === "3" && currency2 === "1") {
-        result = amount / conversionRates["金-綠寶石"]; // 金轉換為綠寶石
-    }
-
-    document.getElementById('currency-result').innerText = `使用 ${amount} 單位的貨幣 1，相當於約 ${result.toFixed(2)} 單位的貨幣 2。`;
-}
-
-function calculateCost() {
-    const itemPrice = document.getElementById('item').value; // 商品價格 (綠寶石)
-    const itemQuantity = parseFloat(document.getElementById('item-quantity').value);
+        function calculateCost() {
+    const itemPrice = document.getElementById('item').value; // 商品選擇的價目表 (16, 32, 64)
+    const itemQuantity = parseFloat(document.getElementById('item-quantity').value); // 商品數量
     const paymentCurrency = document.getElementById('payment-currency').value; // 支付貨幣 (銅/金/綠寶石)
 
+    // 檢查商品數量和支付貨幣是否有效
     if (isNaN(itemQuantity) || itemQuantity <= 0) {
         document.getElementById('item-result').innerText = '請輸入有效的商品數量。';
         return;
     }
 
-    if (isNaN(paymentCurrency)) {
+    if (isNaN(paymentCurrency) || paymentCurrency === "") {
         document.getElementById('item-result').innerText = '請選擇有效的支付貨幣。';
         return;
     }
 
-    // 設定商品價格換算比例
+    // 設定商品價格換算比例 (綠寶石 -> 銅/金)
     const itemRates = {
         "16": { // 遠古遺骸價格
-            "銅": 432,
-            "金": 48,
-            "綠寶石": 16,
+            "銅": 432,  // 1 遠古遺骸 = 432 銅
+            "金": 48,   // 1 遠古遺骸 = 48 金
+            "綠寶石": 16, // 1 遠古遺骸 = 16 綠寶石
         },
         "32": { // 獄髓碎片價格
-            "銅": 864,
-            "金": 96,
-            "綠寶石": 32,
+            "銅": 864,  // 1 獄髓碎片 = 864 銅
+            "金": 96,   // 1 獄髓碎片 = 96 金
+            "綠寶石": 32, // 1 獄髓碎片 = 32 綠寶石
         },
         "64": { // 獄髓升級模版價格
-            "銅": 1728,
-            "金": 192,
-            "綠寶石": 64,
+            "銅": 1728, // 1 獄髓升級模版 = 1728 銅
+            "金": 192,  // 1 獄髓升級模版 = 192 金
+            "綠寶石": 64, // 1 獄髓升級模版 = 64 綠寶石
         },
     };
 
-    // 根據選擇的商品和支付貨幣進行計算
-    const totalCost = itemRates[itemPrice][paymentCurrency] * itemQuantity;
+    // 確保商品價格對應的支付貨幣存在
+    const selectedRates = itemRates[itemPrice];
+
+    if (!selectedRates) {
+        document.getElementById('item-result').innerText = '無效的商品選擇。';
+        return;
+    }
+
+    // 確保選擇的支付貨幣有效
+    if (!selectedRates[paymentCurrency]) {
+        document.getElementById('item-result').innerText = '無效的貨幣選擇。';
+        return;
+    }
+
+    // 計算總價格
+    const totalCost = selectedRates[paymentCurrency] * itemQuantity;
+
+    // 顯示計算結果
     document.getElementById('item-result').innerText = `購買 ${itemQuantity} 單位的商品需要約 ${totalCost} 單位的選定支付貨幣。`;
 }
     </script>
