@@ -89,23 +89,27 @@
                 <tbody>
                     <tr>
                         <td>銅 (貨幣)</td>
-                        <td>9 = 1 金</td>
+                        <td>9 銅 換 1 金</td>
                     </tr>
                     <tr>
                         <td>金 (貨幣)</td>
-                        <td>3 = 1 綠寶石</td>
+                        <td>3 金 換 1 綠寶石</td>
+                    </tr>
+                    <tr>
+                        <td>綠寶石 (貨幣)</td>
+                        <td>1 綠寶石 換 27 銅</td>
                     </tr>
                     <tr>
                         <td>遠古遺骸 (商品)</td>
-                        <td>1 = 16 綠寶石</td>
+                        <td>1 遠古遺骸 = 16 綠寶石 / 48 金 / 432 銅</td>
                     </tr>
                     <tr>
                         <td>獄髓碎片 (商品)</td>
-                        <td>2 = 32 綠寶石</td>
+                        <td>2 獄髓碎片 = 32 綠寶石 / 96 金 / 864 銅</td>
                     </tr>
                     <tr>
                         <td>獄髓升級模版 (商品)</td>
-                        <td>1 = 64 綠寶石</td>
+                        <td>1 獄髓升級模版 = 64 綠寶石 / 192 金 / 1728 銅</td>
                     </tr>
                 </tbody>
             </table>
@@ -162,32 +166,41 @@
 
     <script>
         function convertCurrency() {
-            const currency1 = parseFloat(document.getElementById('currency1').value);
-            const currency2 = parseFloat(document.getElementById('currency2').value);
-            const amount = parseFloat(document.getElementById('currency-amount').value);
+    const currency1 = document.getElementById('currency1').value;
+    const currency2 = document.getElementById('currency2').value;
+    const amount = parseFloat(document.getElementById('currency-amount').value);
 
-            if (isNaN(currency1) || isNaN(currency2) || isNaN(amount) || amount <= 0) {
-                document.getElementById('currency-result').innerText = '請輸入有效的正數。';
-                return;
-            }
+    if (isNaN(amount) || amount <= 0) {
+        document.getElementById('currency-result').innerText = '請輸入有效的正數。';
+        return;
+    }
 
-            const equivalent = (currency1 * amount) / currency2;
-            document.getElementById('currency-result').innerText = `使用 ${amount} 單位的貨幣 1，相當於約 ${equivalent.toFixed(2)} 單位的貨幣 2。`;
-        }
+    let result;
+    
+    // 設定貨幣之間的轉換比例
+    const conversionRates = {
+        "銅-金": 9, // 9 銅 = 1 金
+        "金-綠寶石": 3, // 3 金 = 1 綠寶石
+        "綠寶石-銅": 27, // 1 綠寶石 = 27 銅
+    };
 
-        function calculateCost() {
-            const itemPrice = parseFloat(document.getElementById('item').value);
-            const itemQuantity = parseFloat(document.getElementById('item-quantity').value);
-            const paymentCurrency = parseFloat(document.getElementById('payment-currency').value);
+    // 根據選擇的貨幣進行轉換計算
+    if (currency1 === "9" && currency2 === "1") {
+        result = amount / conversionRates["綠寶石-銅"]; // 銅轉換為綠寶石
+    } else if (currency1 === "1" && currency2 === "9") {
+        result = amount * conversionRates["綠寶石-銅"]; // 綠寶石轉換為銅
+    } else if (currency1 === "3" && currency2 === "9") {
+        result = amount * conversionRates["銅-金"]; // 金轉換為銅
+    } else if (currency1 === "9" && currency2 === "3") {
+        result = amount / conversionRates["銅-金"]; // 銅轉換為金
+    } else if (currency1 === "1" && currency2 === "3") {
+        result = amount * conversionRates["金-綠寶石"]; // 綠寶石轉換為金
+    } else if (currency1 === "3" && currency2 === "1") {
+        result = amount / conversionRates["金-綠寶石"]; // 金轉換為綠寶石
+    }
 
-            if (isNaN(itemPrice) || isNaN(itemQuantity) || isNaN(paymentCurrency) || itemQuantity <= 0) {
-                document.getElementById('item-result').innerText = '請輸入有效的正數。';
-                return;
-            }
-
-            const totalCost = (itemPrice * itemQuantity) / paymentCurrency;
-            document.getElementById('item-result').innerText = `購買 ${itemQuantity} 單位的商品需要約 ${totalCost.toFixed(2)} 單位的選定支付貨幣。`;
-        }
+    document.getElementById('currency-result').innerText = `使用 ${amount} 單位的貨幣 1，相當於約 ${result.toFixed(2)} 單位的貨幣 2。`;
+}
     </script>
 </body>
 </html>
