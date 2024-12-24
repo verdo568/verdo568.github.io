@@ -117,24 +117,30 @@
                         <td>獄髓升級模版</td>
                         <td>64 綠寶石 / 192 金錠 / 1728 銅錠</td>
                     </tr>
+                    <tr></tr>
+                        <td>混凝土</td>
+                        <td>24 綠寶石 / 72 金錠 / 648 銅錠</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="converter">
-            <h2>貨幣互相轉換</h2>
+            <h2>貨幣轉換</h2>
             <label for="currency1">選擇貨幣 1：</label>
             <select id="currency1">
-                <option value="9">銅錠</option>
-                <option value="3">金錠</option>
                 <option value="1">綠寶石</option>
+                <option value="3">金錠</option>
+                <option value="9">銅錠</option>
+                
+                
             </select>
 
             <label for="currency2">選擇貨幣 2：</label>
             <select id="currency2">
-                <option value="9">銅錠</option>
-                <option value="3">金錠</option>
                 <option value="1">綠寶石</option>
+                <option value="3">金錠</option>
+                <option value="9">銅錠</option>
             </select>
 
             <label for="currency-amount">輸入貨幣 1 的數量：</label>
@@ -150,8 +156,9 @@
             <label for="item">選擇商品：</label>
             <select id="item">
                 <option value="16">遠古遺骸</option>
-                <option value="32">獄髓碎片</option>
+                <option value="32">獄髓碎片(2個)</option>
                 <option value="64">獄髓升級模版</option>
+                <option value="24">混凝土</option>
             </select>
 
             <label for="item-quantity">輸入商品數量：</label>
@@ -159,9 +166,9 @@
 
             <label for="payment-currency">選擇支付貨幣：</label>
             <select id="payment-currency">
-                <option value="9">銅錠</option>
-                <option value="3">金錠</option>
                 <option value="1">綠寶石</option>
+                <option value="3">金錠</option>
+                <option value="9">銅錠</option>
             </select>
 
             <button onclick="calculateCost()">計算成本</button>
@@ -204,6 +211,11 @@
             "3": 192,  // 1 獄髓升級模版 = 192 金
             "1": 64,   // 1 獄髓升級模版 = 64 綠寶石
         },
+        "24": { // 混凝土價格
+            "9": 648,  // 1 混凝土 = 648 銅
+            "3": 72,   // 1 混凝土 = 72 金
+            "1": 24,   // 1 混凝土 = 24 綠寶石
+        },
     };
 
     // 確保商品價格對應的支付貨幣存在
@@ -229,6 +241,8 @@
     document.getElementById('item-result').innerText = `購買 ${itemQuantity} 單位的商品需要約 ${totalCost} 單位的選定支付貨幣。`;
 }
     </script>
+
+
     <script>
         function convertCurrency() {
     const currency1 = document.getElementById('currency1').value;
