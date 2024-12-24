@@ -43,7 +43,7 @@
             display: block;
             margin: 10px 0 5px;
         }
-        .converter select {
+        .converter select, .converter input {
             width: calc(100% - 20px);
             padding: 10px;
             border: 1px solid #555;
@@ -82,29 +82,29 @@
             <table>
                 <thead>
                     <tr>
-                        <th>商品</th>
+                        <th>貨幣/商品</th>
                         <th>價格</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>銅</td>
+                        <td>銅 (貨幣)</td>
                         <td>9 = 1 金</td>
                     </tr>
                     <tr>
-                        <td>金</td>
+                        <td>金 (貨幣)</td>
                         <td>3 = 1 綠寶石</td>
                     </tr>
                     <tr>
-                        <td>綠寶石</td>
+                        <td>綠寶石 (貨幣)</td>
                         <td>16 = 1 遠古遺骸</td>
                     </tr>
                     <tr>
-                        <td>綠寶石</td>
+                        <td>遠古遺骸 (商品)</td>
                         <td>32 = 2 獄髓碎片</td>
                     </tr>
                     <tr>
-                        <td>綠寶石</td>
+                        <td>獄髓升級模版 (商品)</td>
                         <td>64 = 1 獄髓升級模版</td>
                     </tr>
                 </tbody>
@@ -112,48 +112,81 @@
         </div>
 
         <div class="converter">
-            <h2>轉換價格</h2>
-            <label for="product1">選擇商品 1：</label>
-            <select id="product1">
-                <option value="9">銅 - 9</option>
-                <option value="3">金 - 3</option>
-                <option value="16">綠寶石 - 16</option>
-                <option value="32">綠寶石 - 32</option>
-                <option value="64">綠寶石 - 64</option>
+            <h2>貨幣互相轉換</h2>
+            <label for="currency1">選擇貨幣 1：</label>
+            <select id="currency1">
+                <option value="9">銅</option>
+                <option value="3">金</option>
+                <option value="16">綠寶石</option>
             </select>
 
-            <label for="product2">選擇商品 2：</label>
-            <select id="product2">
-                <option value="9">銅 - 9</option>
-                <option value="3">金 - 3</option>
-                <option value="16">綠寶石 - 16</option>
-                <option value="32">綠寶石 - 32</option>
-                <option value="64">綠寶石 - 64</option>
+            <label for="currency2">選擇貨幣 2：</label>
+            <select id="currency2">
+                <option value="9">銅</option>
+                <option value="3">金</option>
+                <option value="16">綠寶石</option>
             </select>
 
-            <label for="quantity">輸入商品 1 的數量：</label>
-            <input type="number" id="quantity" placeholder="商品 1 的數量" min="1">
+            <label for="currency-amount">輸入貨幣 1 的數量：</label>
+            <input type="number" id="currency-amount" placeholder="貨幣數量" min="1">
 
-            <button onclick="convertPrices()">轉換</button>
+            <button onclick="convertCurrency()">轉換貨幣</button>
 
-            <div class="result" id="result"></div>
+            <div class="result" id="currency-result"></div>
+        </div>
+
+        <div class="converter">
+            <h2>商品購買計算</h2>
+            <label for="item">選擇商品：</label>
+            <select id="item">
+                <option value="16">遠古遺骸</option>
+                <option value="32">獄髓碎片</option>
+                <option value="64">獄髓升級模版</option>
+            </select>
+
+            <label for="item-quantity">輸入商品數量：</label>
+            <input type="number" id="item-quantity" placeholder="商品數量" min="1">
+
+            <label for="payment-currency">選擇支付貨幣：</label>
+            <select id="payment-currency">
+                <option value="9">銅</option>
+                <option value="3">金</option>
+                <option value="16">綠寶石</option>
+            </select>
+
+            <button onclick="calculateCost()">計算成本</button>
+
+            <div class="result" id="item-result"></div>
         </div>
     </div>
 
     <script>
-        function convertPrices() {
-            const price1 = parseFloat(document.getElementById('product1').value);
-            const price2 = parseFloat(document.getElementById('product2').value);
-            const quantity = parseFloat(document.getElementById('quantity').value);
+        function convertCurrency() {
+            const currency1 = parseFloat(document.getElementById('currency1').value);
+            const currency2 = parseFloat(document.getElementById('currency2').value);
+            const amount = parseFloat(document.getElementById('currency-amount').value);
 
-            if (isNaN(price1) || isNaN(price2) || isNaN(quantity) || quantity <= 0) {
-                document.getElementById('result').innerText = '請輸入有效的正數。';
+            if (isNaN(currency1) || isNaN(currency2) || isNaN(amount) || amount <= 0) {
+                document.getElementById('currency-result').innerText = '請輸入有效的正數。';
                 return;
             }
 
-            const equivalentQuantity = (price1 * quantity) / price2;
+            const equivalent = (currency1 * amount) / currency2;
+            document.getElementById('currency-result').innerText = `使用 ${amount} 單位的貨幣 1，相當於約 ${equivalent.toFixed(2)} 單位的貨幣 2。`;
+        }
 
-            document.getElementById('result').innerText = `選擇的商品 1 (${price1}) 的 ${quantity} 單位，相當於約 ${equivalentQuantity.toFixed(2)} 單位的商品 2 (${price2})。`;
+        function calculateCost() {
+            const itemPrice = parseFloat(document.getElementById('item').value);
+            const itemQuantity = parseFloat(document.getElementById('item-quantity').value);
+            const paymentCurrency = parseFloat(document.getElementById('payment-currency').value);
+
+            if (isNaN(itemPrice) || isNaN(itemQuantity) || isNaN(paymentCurrency) || itemQuantity <= 0) {
+                document.getElementById('item-result').innerText = '請輸入有效的正數。';
+                return;
+            }
+
+            const totalCost = (itemPrice * itemQuantity) / paymentCurrency;
+            document.getElementById('item-result').innerText = `購買 ${itemQuantity} 單位的商品需要約 ${totalCost.toFixed(2)} 單位的選定支付貨幣。`;
         }
     </script>
 </body>
