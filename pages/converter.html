@@ -184,19 +184,19 @@
     // 設定商品價格換算比例 (綠寶石 -> 銅/金)
     const itemRates = {
         "16": { // 遠古遺骸價格
-            "銅": 432,  // 1 遠古遺骸 = 432 銅
-            "金": 48,   // 1 遠古遺骸 = 48 金
-            "綠寶石": 16, // 1 遠古遺骸 = 16 綠寶石
+            "9": 432,  // 1 遠古遺骸 = 432 銅
+            "3": 48,   // 1 遠古遺骸 = 48 金
+            "1": 16,   // 1 遠古遺骸 = 16 綠寶石
         },
         "32": { // 獄髓碎片價格
-            "銅": 864,  // 1 獄髓碎片 = 864 銅
-            "金": 96,   // 1 獄髓碎片 = 96 金
-            "綠寶石": 32, // 1 獄髓碎片 = 32 綠寶石
+            "9": 864,  // 1 獄髓碎片 = 864 銅
+            "3": 96,   // 1 獄髓碎片 = 96 金
+            "1": 32,   // 1 獄髓碎片 = 32 綠寶石
         },
         "64": { // 獄髓升級模版價格
-            "銅": 1728, // 1 獄髓升級模版 = 1728 銅
-            "金": 192,  // 1 獄髓升級模版 = 192 金
-            "綠寶石": 64, // 1 獄髓升級模版 = 64 綠寶石
+            "9": 1728, // 1 獄髓升級模版 = 1728 銅
+            "3": 192,  // 1 獄髓升級模版 = 192 金
+            "1": 64,   // 1 獄髓升級模版 = 64 綠寶石
         },
     };
 
@@ -209,13 +209,15 @@
     }
 
     // 確保選擇的支付貨幣有效
-    if (!selectedRates[paymentCurrency]) {
+    const costForSelectedCurrency = selectedRates[paymentCurrency];
+
+    if (costForSelectedCurrency === undefined) {
         document.getElementById('item-result').innerText = '無效的貨幣選擇。';
         return;
     }
 
     // 計算總價格
-    const totalCost = selectedRates[paymentCurrency] * itemQuantity;
+    const totalCost = costForSelectedCurrency * itemQuantity;
 
     // 顯示計算結果
     document.getElementById('item-result').innerText = `購買 ${itemQuantity} 單位的商品需要約 ${totalCost} 單位的選定支付貨幣。`;
