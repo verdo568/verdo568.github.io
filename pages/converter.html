@@ -224,7 +224,42 @@
 }
     </script>
     <script>
-        
+        function convertCurrency() {
+    const currency1 = document.getElementById('currency1').value;
+    const currency2 = document.getElementById('currency2').value;
+    const amount = parseFloat(document.getElementById('currency-amount').value);
+
+    if (isNaN(amount) || amount <= 0) {
+        document.getElementById('currency-result').innerText = '請輸入有效的正數。';
+        return;
+    }
+
+    let result;
+    
+    // 設定貨幣之間的轉換比例
+    const conversionRates = {
+        "銅-金": 9, // 9 銅 = 1 金
+        "金-綠寶石": 3, // 3 金 = 1 綠寶石
+        "綠寶石-銅": 27, // 1 綠寶石 = 27 銅
+    };
+
+    // 根據選擇的貨幣進行轉換計算
+    if (currency1 === "9" && currency2 === "1") {
+        result = amount / conversionRates["綠寶石-銅"]; // 銅轉換為綠寶石
+    } else if (currency1 === "1" && currency2 === "9") {
+        result = amount * conversionRates["綠寶石-銅"]; // 綠寶石轉換為銅
+    } else if (currency1 === "3" && currency2 === "9") {
+        result = amount * conversionRates["銅-金"]; // 金轉換為銅
+    } else if (currency1 === "9" && currency2 === "3") {
+        result = amount / conversionRates["銅-金"]; // 銅轉換為金
+    } else if (currency1 === "1" && currency2 === "3") {
+        result = amount * conversionRates["金-綠寶石"]; // 綠寶石轉換為金
+    } else if (currency1 === "3" && currency2 === "1") {
+        result = amount / conversionRates["金-綠寶石"]; // 金轉換為綠寶石
+    }
+
+    document.getElementById('currency-result').innerText = `使用 ${amount} 單位的貨幣 1，相當於約 ${result.toFixed(2)} 單位的貨幣 2。`;
+}
     </script>
 </body>
 </html>
