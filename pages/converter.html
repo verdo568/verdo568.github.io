@@ -82,34 +82,40 @@
             <table>
                 <thead>
                     <tr>
-                        <th>貨幣/商品</th>
-                        <th>價格</th>
+                        <th>貨幣</th>
+                        <th>匯率</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>銅 (貨幣)</td>
-                        <td>9 銅 換 1 金</td>
+                        <td>銅錠</td>
+                        <td>9 銅錠 換 1 金錠</td>
                     </tr>
                     <tr>
-                        <td>金 (貨幣)</td>
-                        <td>3 金 換 1 綠寶石</td>
+                        <td>金錠</td>
+                        <td>3 金錠 換 1 綠寶石</td>
                     </tr>
                     <tr>
-                        <td>綠寶石 (貨幣)</td>
-                        <td>1 綠寶石 換 27 銅</td>
+                        <td>綠寶石</td>
+                        <td>1 綠寶石 換 27 銅錠</td>
+                    </tr>
+                </tbody>
+                <thead><tr>
+                    <th>商品</th>
+                    <th>價格</th>
+                </tr></thead>
+                <tbody>
+                    <tr>
+                        <td>遠古遺骸</td>
+                        <td>16 綠寶石 / 48 金錠 / 432 銅錠</td>
                     </tr>
                     <tr>
-                        <td>遠古遺骸 (商品)</td>
-                        <td>1 遠古遺骸 = 16 綠寶石 / 48 金 / 432 銅</td>
+                        <td>獄髓碎片(2個)</td>
+                        <td>32 綠寶石 / 96 金錠 / 864 銅錠</td>
                     </tr>
                     <tr>
-                        <td>獄髓碎片 (商品)</td>
-                        <td>2 獄髓碎片 = 32 綠寶石 / 96 金 / 864 銅</td>
-                    </tr>
-                    <tr>
-                        <td>獄髓升級模版 (商品)</td>
-                        <td>1 獄髓升級模版 = 64 綠寶石 / 192 金 / 1728 銅</td>
+                        <td>獄髓升級模版</td>
+                        <td>64 綠寶石 / 192 金錠 / 1728 銅錠</td>
                     </tr>
                 </tbody>
             </table>
@@ -119,15 +125,15 @@
             <h2>貨幣互相轉換</h2>
             <label for="currency1">選擇貨幣 1：</label>
             <select id="currency1">
-                <option value="9">銅</option>
-                <option value="3">金</option>
+                <option value="9">銅錠</option>
+                <option value="3">金錠</option>
                 <option value="1">綠寶石</option>
             </select>
 
             <label for="currency2">選擇貨幣 2：</label>
             <select id="currency2">
-                <option value="9">銅</option>
-                <option value="3">金</option>
+                <option value="9">銅錠</option>
+                <option value="3">金錠</option>
                 <option value="1">綠寶石</option>
             </select>
 
@@ -153,8 +159,8 @@
 
             <label for="payment-currency">選擇支付貨幣：</label>
             <select id="payment-currency">
-                <option value="9">銅</option>
-                <option value="3">金</option>
+                <option value="9">銅錠</option>
+                <option value="3">金錠</option>
                 <option value="1">綠寶石</option>
             </select>
 
