@@ -65,7 +65,7 @@ function calculateCost() {
     const totalCost = costForSelectedCurrency * itemQuantity;
 
     // 顯示計算結果
-    document.getElementById('item-result').innerText = `購買 ${itemQuantity} 單位的 ${itemName} 需要約 ${totalCost} 單位的 ${paymentCurrencyName}。`;
+    document.getElementById('item-result').innerText = `購買 ${itemQuantity} 單位的 ${itemName}，需要約 ${totalCost} 單位的 ${paymentCurrencyName}。`;
 }
 
 // 貨幣轉換 綠寶石/金錠/銅錠/鑽石
@@ -89,6 +89,7 @@ function convertCurrency() {
         "鑽石-綠寶石": 16, // 1 鑽石 = 16 綠寶石
         "鑽石-金": 144, // 1 鑽石 = 144 金
         "鑽石-銅": 864, // 1 鑽石 = 864 銅
+        "鑽石-鑽石": 1, // 1 鑽石 = 1 鑽石
     };
 
     // 根據選擇的貨幣進行轉換計算
@@ -116,6 +117,8 @@ function convertCurrency() {
         result = amount * conversionRates["鑽石-銅"]; // 鑽石轉換為銅   
     } else if (currency1.value === "6" && currency2.value === "16") {
         result = amount / conversionRates["鑽石-銅"]; // 銅轉換為鑽石
+    } else if (currency1.value === "16" && currency2.value === "16") {
+        result = amount / conversionRates["鑽石-鑽石"]; // 鑽石轉換為鑽石
     }
 
     const currency1Name = currency1.options[currency1.selectedIndex].text;
