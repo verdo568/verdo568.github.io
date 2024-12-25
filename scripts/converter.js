@@ -4,7 +4,7 @@ function calculateCost() {
     const itemName = itemElement.options[itemElement.selectedIndex].text; // 商品名稱
     const itemQuantity = parseFloat(document.getElementById('item-quantity').value); // 商品數量
     const paymentCurrencyElement = document.getElementById('payment-currency');
-    const paymentCurrency = paymentCurrencyElement.value; // 支付貨幣 (銅/金/綠寶石)
+    const paymentCurrency = paymentCurrencyElement.value; // 支付貨幣 (銅/金/綠寶石/鑽石)
     const paymentCurrencyName = paymentCurrencyElement.options[paymentCurrencyElement.selectedIndex].text; // 支付貨幣名稱
     // 檢查商品數量和支付貨幣是否有效
     if (isNaN(itemQuantity) || itemQuantity <= 0) {
@@ -43,6 +43,12 @@ function calculateCost() {
             "1": 24,   // 1 混凝土 = 24 綠寶石
             "16": 2,   // 1 混凝土 = 2 鑽石    
         },
+        "64-2": { // 獄髓錠價格
+            "6": 2592,  // 1 獄髓錠 = 2592 銅
+            "9": 432,   // 1 獄髓錠 = 432 金
+            "1": 48,   // 1 獄髓錠 = 48 綠寶石
+            "16": 4,   // 1 獄髓錠 = 4 鑽石    
+        },  
     };
 
     // 確保商品價格對應的支付貨幣存在
