@@ -4,74 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>價目欄&匯率表</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #1e1e1e;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            text-align: center;
-            color: #f5ba41;
-        }
-        .price-table, .converter {
-            margin-top: 20px;
-        }
-        .price-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .price-table th, .price-table td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: center;
-        }
-        .price-table th {
-            background-color: #333;
-        }
-        .converter label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        .converter select, .converter input {
-            width: calc(100% - 20px);
-            padding: 10px;
-            border: 1px solid #555;
-            border-radius: 4px;
-            background-color: #262626;
-            color: #ffffff;
-        }
-        .converter button {
-            margin-top: 10px;
-            padding: 10px;
-            width: 100%;
-            border: none;
-            border-radius: 4px;
-            background-color: #f5ba41;
-            color: #121212;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .converter button:hover {
-            background-color: #ffa31a;
-        }
-        .result {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/converter.css">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W49DBFB1S5"></script>
@@ -114,19 +47,19 @@
                 <tbody>
                     <tr>
                         <td>遠古遺骸</td>
-                        <td>16 綠寶石 / 48 金錠 / 432 銅錠</td>
+                        <td>16 綠寶石 / 144 金錠 / 864 銅錠</td>
                     </tr>
                     <tr>
                         <td>獄髓碎片(2個)</td>
-                        <td>32 綠寶石 / 96 金錠 / 864 銅錠</td>
+                        <td>32 綠寶石 / 288 金錠 / 1728 銅錠</td>
                     </tr>
                     <tr>
                         <td>獄髓升級模版</td>
-                        <td>64 綠寶石 / 192 金錠 / 1728 銅錠</td>
+                        <td>64 綠寶石 / 576 金錠 / 3456 銅錠</td>
                     </tr>
                     <tr></tr>
                         <td>混凝土</td>
-                        <td>24 綠寶石 / 72 金錠 / 648 銅錠</td>
+                        <td>24 綠寶石 / 216 金錠 / 1296 銅錠</td>
                     </tr>
                 </tbody>
             </table>
@@ -174,8 +107,8 @@
             <label for="payment-currency">選擇支付貨幣：</label>
             <select id="payment-currency">
                 <option value="1">綠寶石</option>
-                <option value="3">金錠</option>
-                <option value="9">銅錠</option>
+                <option value="9">金錠</option>
+                <option value="6">銅錠</option>
             </select>
 
             <button onclick="calculateCost()">計算成本</button>
@@ -204,23 +137,23 @@
     // 設定商品價格換算比例 (綠寶石 -> 銅/金)
     const itemRates = {
         "16": { // 遠古遺骸價格
-            "9": 432,  // 1 遠古遺骸 = 432 銅
-            "3": 48,   // 1 遠古遺骸 = 48 金
+            "6": 864,  // 1 遠古遺骸 = 864 銅
+            "9": 144,   // 1 遠古遺骸 = 144 金
             "1": 16,   // 1 遠古遺骸 = 16 綠寶石
         },
         "32": { // 獄髓碎片價格
-            "9": 864,  // 1 獄髓碎片 = 864 銅
-            "3": 96,   // 1 獄髓碎片 = 96 金
+            "6": 1728,  // 1 獄髓碎片 = 1728 銅
+            "9": 288,   // 1 獄髓碎片 = 288 金
             "1": 32,   // 1 獄髓碎片 = 32 綠寶石
         },
         "64": { // 獄髓升級模版價格
-            "9": 1728, // 1 獄髓升級模版 = 1728 銅
-            "3": 192,  // 1 獄髓升級模版 = 192 金
+            "6": 3456, // 1 獄髓升級模版 = 3456 銅
+            "9": 576,  // 1 獄髓升級模版 = 576 金
             "1": 64,   // 1 獄髓升級模版 = 64 綠寶石
         },
         "24": { // 混凝土價格
-            "9": 648,  // 1 混凝土 = 648 銅
-            "3": 72,   // 1 混凝土 = 72 金
+            "6": 1296,  // 1 混凝土 = 1296 銅
+            "9": 216,   // 1 混凝土 = 216 金
             "1": 24,   // 1 混凝土 = 24 綠寶石
         },
     };
