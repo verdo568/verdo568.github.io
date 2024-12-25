@@ -97,11 +97,11 @@
                 <tbody>
                     <tr>
                         <td>銅錠</td>
-                        <td>9 銅錠 換 1 金錠</td>
+                        <td>6 銅錠 換 1 金錠</td>
                     </tr>
                     <tr>
                         <td>金錠</td>
-                        <td>3 金錠 換 1 綠寶石</td>
+                        <td>9 金錠 換 1 綠寶石</td>
                     </tr>
                     <tr>
                       <td>綠寶石</td>
@@ -137,8 +137,8 @@
             <label for="currency1">選擇貨幣 1：</label>
             <select id="currency1">
                 <option value="1">綠寶石</option>
-                <option value="3">金錠</option>
-                <option value="9">銅錠</option>
+                <option value="9">金錠</option>
+                <option value="6">銅錠</option>
                 
                 
             </select>
@@ -146,8 +146,8 @@
             <label for="currency2">選擇貨幣 2：</label>
             <select id="currency2">
                 <option value="1">綠寶石</option>
-                <option value="3">金錠</option>
-                <option value="9">銅錠</option>
+                <option value="9">金錠</option>
+                <option value="6">銅錠</option>
             </select>
 
             <label for="currency-amount">輸入貨幣 1 的數量：</label>
@@ -264,23 +264,23 @@
     
     // 設定貨幣之間的轉換比例
     const conversionRates = {
-        "銅-金": 9, // 9 銅 = 1 金
-        "金-綠寶石": 3, // 3 金 = 1 綠寶石
-        "綠寶石-銅": 27, // 1 綠寶石 = 27 銅
+        "銅-金": 6, // 6 銅 = 1 金
+        "金-綠寶石": 9, // 9 金 = 1 綠寶石
+        "綠寶石-銅": 54, // 1 綠寶石 = 27 銅
     };
 
     // 根據選擇的貨幣進行轉換計算
-    if (currency1 === "9" && currency2 === "1") {
+    if (currency1 === "6" && currency2 === "1") {
         result = amount / conversionRates["綠寶石-銅"]; // 銅轉換為綠寶石
-    } else if (currency1 === "1" && currency2 === "9") {
+    } else if (currency1 === "1" && currency2 === "6") {
         result = amount * conversionRates["綠寶石-銅"]; // 綠寶石轉換為銅
-    } else if (currency1 === "3" && currency2 === "9") {
+    } else if (currency1 === "9" && currency2 === "6") {
         result = amount * conversionRates["銅-金"]; // 金轉換為銅
-    } else if (currency1 === "9" && currency2 === "3") {
+    } else if (currency1 === "6" && currency2 === "9") {
         result = amount / conversionRates["銅-金"]; // 銅轉換為金
-    } else if (currency1 === "1" && currency2 === "3") {
+    } else if (currency1 === "1" && currency2 === "9") {
         result = amount * conversionRates["金-綠寶石"]; // 綠寶石轉換為金
-    } else if (currency1 === "3" && currency2 === "1") {
+    } else if (currency1 === "9" && currency2 === "1") {
         result = amount / conversionRates["金-綠寶石"]; // 金轉換為綠寶石
     }
 
