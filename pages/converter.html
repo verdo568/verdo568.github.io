@@ -39,8 +39,13 @@
                     </tr>
                     <tr>
                       <td>綠寶石</td>
+                      <td>16 綠寶石 = 1 鑽石</td>
+                    </tr>
+                    <tr></tr>
+                      <td>鑽石</td>
                       <td>為最高面額</td>
                     </tr>
+                </tbody>
                 <thead><tr>
                     <th>商品</th>
                     <th>價格</th>
@@ -59,7 +64,7 @@
                         <td>64 綠寶石 / 576 金錠 / 3456 銅錠</td>
                     </tr>
                     <tr></tr>
-                        <td>混凝土</td>
+                        <td>混凝土(組)</td>
                         <td>24 綠寶石 / 216 金錠 / 1296 銅錠</td>
                     </tr>
                 </tbody>
@@ -70,15 +75,15 @@
             <h2>貨幣轉換</h2>
             <label for="currency1">選擇貨幣 1：</label>
             <select id="currency1">
+                <option value="16">鑽石</option>
                 <option value="1">綠寶石</option>
                 <option value="9">金錠</option>
                 <option value="6">銅錠</option>
-                
-                
             </select>
 
             <label for="currency2">選擇貨幣 2：</label>
             <select id="currency2">
+                <option value="16">鑽石</option>
                 <option value="1">綠寶石</option>
                 <option value="9">金錠</option>
                 <option value="6">銅錠</option>
@@ -99,17 +104,17 @@
                 <option value="16">遠古遺骸</option>
                 <option value="32">獄髓碎片(2個)</option>
                 <option value="64">獄髓升級模版</option>
-                <option value="24">混凝土</option>
+                <option value="24">混凝土(組)</option>
             </select>
 
             <label for="item-quantity">輸入商品數量：</label>
             <input type="number" id="item-quantity" placeholder="商品數量" min="1">
-
             <label for="payment-currency">選擇支付貨幣：</label>
             <select id="payment-currency">
+                <option value="16">鑽石</option>
                 <option value="1">綠寶石</option>
                 <option value="9">金錠</option>
-                <option value="6">銅錠</option>
+                <option value="6">銅錠</option>     
             </select>
 
             <button onclick="calculateCost()">計算成本</button>
