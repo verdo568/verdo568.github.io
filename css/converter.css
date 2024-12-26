@@ -64,3 +64,12 @@ h1 {
     background-color: #333;
     border-radius: 4px;
 }
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2546b6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
