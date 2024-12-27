@@ -70,7 +70,6 @@ body {
 }
 
 /* 下拉選單 */
-/* 下拉選單 */
 .dropdown {
   position: relative;
 }
@@ -80,7 +79,7 @@ body {
   display: none;
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 16%;
   transform: translateX(-50%);
   background-color: rgba(51, 51, 51, 0.95);
   padding: 0.5rem;
@@ -90,6 +89,23 @@ body {
   z-index: 1;
 }
 
+@media (min-width: 40rem) {
+  .dropdown-menu {
+    left: 15%;
+  }
+}
+
+@media (min-width: 55rem) {
+  .dropdown-menu {
+    left: 8%;
+  }
+}
+
+@media (min-width: 85rem) {
+  .dropdown-menu {
+    left: 50%;
+  }
+}
 /* 下拉選單中的項目 */
 .dropdown-menu li {
   margin: 0.5rem 0;
@@ -433,7 +449,7 @@ picture {
     --underline-gap: .5rem;
     position: fixed;
     z-index: 1000;
-    inset: 0 0 0 30%;
+    inset: 0 0 0 65%;
     list-style: none;
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
@@ -473,6 +489,30 @@ picture {
   .mobile-nav-toggle:focus-visible {
     outline: 5px solid white;
     outline-offset: 5px;
+  }
+}
+
+/* 媒体查询 (最大宽度 55rem) */
+@media (max-width: 55rem) {
+  /* 主要导航样式 (移动设备) */
+  .primary-navigation {
+    inset: 0 0 0 50%;
+  }
+}
+
+/* 媒体查询 (最大宽度 55rem) */
+@media (max-width: 60rem) {
+  /* 主要导航样式 (移动设备) */
+  .primary-navigation {
+    inset: 0 0 0 50%;
+  }
+}
+
+/* 媒体查询 (最大宽度 55rem) */
+@media (max-width: 80rem) {
+  /* 主要导航样式 (移动设备) */
+  .primary-navigation {
+    inset: 0 0 0 65%;
   }
 }
 
