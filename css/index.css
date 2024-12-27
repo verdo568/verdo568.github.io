@@ -1,14 +1,14 @@
 /* ------------------- */
-/* Reset               */
+/* 重置               */
 /* ------------------- */
-/* Box sizing */
+/* 盒模型大小 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Reset margins */
+/* 重置外邊距 */
 body,
 h1,
 h2,
@@ -21,6 +21,7 @@ picture {
   margin: 0;
 }
 
+/* 設定標題和段落字體粗細 */
 h1,
 h2,
 h3,
@@ -31,7 +32,7 @@ p {
   font-weight: 400;
 }
 
-/* make form elements easier to work with */
+/* 使表單元素更容易使用 */
 input,
 button,
 textarea,
@@ -39,7 +40,7 @@ select {
   font: inherit;
 }
 
-/* remove animations for people who've turned them off */
+/* 移除動畫 (針對偏好減少動畫的使用者) */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -51,9 +52,9 @@ select {
   }
 }
 /* ------------------- */
-/* Base               */
+/* 基本樣式               */
 /* ------------------- */
-/* set up the body */
+/* 設定頁面主體樣式 */
 body {
   font-family: "Barlow", sans-serif;
   font-size: 0.9375rem;
@@ -68,12 +69,15 @@ body {
   overflow-x: hidden;
 }
 
+/* 下拉選單 */
+/* 下拉選單 */
 .dropdown {
   position: relative;
 }
 
+/* 下拉選單的內容 */
 .dropdown-menu {
-  display: none; 
+  display: none;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -82,77 +86,89 @@ body {
   padding: 0.5rem;
   list-style: none;
   border-radius: 10px;
-  text-align: center; 
+  text-align: center;
   z-index: 1;
 }
 
+/* 下拉選單中的項目 */
 .dropdown-menu li {
   margin: 0.5rem 0;
 }
 
+/* 下拉選單中的連結 */
 .dropdown-menu a {
   text-decoration: none;
   color: white;
   padding: 10px;
   display: block;
   transition: background-color 0.3s ease;
-  font-size: 17px; /* 設置字體大小，您可以根據需求調整 */
+  font-size: 17px;
   border-radius: 10px;
 }
 
+/* 滑鼠滑過連結的樣式 */
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
   background-color: #555;
   color: #fff;
 }
 
+/* 點擊連結的樣式 */
 .dropdown-menu a:active {
   background-color: #444;
 }
 
+/* 當 data-visible 屬性為 true 時，顯示下拉選單 */
 .dropdown-menu[data-visible="true"] {
   display: block;
 }
 
-/* make images easier to work with */
+/* 圖片樣式 */
 img,
-picutre {
+picture {
   max-width: 100%;
   display: block;
 }
 
 /* ------------------- */
-/* Utility classes     */
+/* 輔助類別           */
 /* ------------------- */
-/* general */
+/* 一般樣式 */
+/* 靈活佈局 */
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
 }
 
+/* 網格佈局 */
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
 }
 
+/* 顯示為區塊 */
 .d-block {
   display: block;
 }
 
+/* 流式佈局，除第一個元素外，其他元素添加上邊距 */
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
 }
 
+/* 設定較小的流式佈局間距 */
 .flow--space-small {
   --flow-space: .75rem;
 }
 
+/* 容器樣式 */
 .container {
   padding-inline: 2em;
   margin-inline: auto;
   max-width: 80rem;
 }
 
+/* 網格容器樣式，居中對齊，內部元素居中 */
 .grid-container {
   text-align: center;
   display: grid;
@@ -161,10 +177,12 @@ picutre {
   padding-bottom: 4rem;
 }
 
+/* 網格容器內段落樣式，限制寬度 */
 .grid-container p:not([class]) {
   max-width: 50ch;
 }
 
+/* 螢幕閱讀器隱藏元素 */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -173,11 +191,11 @@ picutre {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
+  white-space: nowrap;
   border: 0;
 }
 
-/* colors */
+/* 色彩 */
 .bg-dark {
   background-color: hsl(230, 35%, 7%);
 }
@@ -202,7 +220,7 @@ picutre {
   color: hsl(0, 0%, 100%);
 }
 
-/* typography */
+/* 字体样式 */
 .ff-serif {
   font-family: "Bellefair", serif;
 }
@@ -283,6 +301,7 @@ picutre {
   color: hsla(0, 0%, 100%, 0.25);
 }
 
+/* 在屏幕宽度 35em 或更大时 */
 @media (min-width: 35em) {
   .numbered-title {
     justify-self: start;
@@ -304,6 +323,8 @@ picutre {
     font-size: 1rem;
   }
 }
+
+/* 在屏幕宽度 45em 或更大时 */
 @media (min-width: 45em) {
   .fs-800 {
     font-size: 6.25rem;
@@ -326,10 +347,10 @@ picutre {
          column-gap: var(--container-gap, 2rem);
     grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
   }
-}
+}/* ------------------- */
+/* 组件样式 */
 /* ------------------- */
-/* Compontents         */
-/* ------------------- */
+/* 大型按钮样式 */
 .large-button {
   font-size: 2rem;
   position: relative;
@@ -342,6 +363,7 @@ picutre {
   text-decoration: none;
 }
 
+/* 大型按鈕懸停效果 */
 .large-button::after {
   content: "";
   position: absolute;
@@ -354,22 +376,26 @@ picutre {
   transition: opacity 500ms linear, transform 750ms ease-in-out;
 }
 
+/* 大型按鈕滑鼠移入/焦點時的動畫效果 */
 .large-button:hover::after,
 .large-button:focus::after {
   opacity: 1;
-  transform: scale(1.5);
+  transform: scale(1.1); /* 調整放大倍率 */
 }
 
-/* primary-header */
+/* 徽标样式 */
 .logo {
   margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
 }
 
+/* 主要页眉样式 */
 .primary-header {
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* 主要导航样式 */
 .primary-navigation {
   --gap: clamp(1.5rem, 5vw, 3.5rem);
   --underline-gap: 2rem;
@@ -381,20 +407,28 @@ picutre {
           backdrop-filter: blur(1.5rem);
 }
 
+/* 主要導航連結樣式 */
 .primary-navigation a {
   text-decoration: none;
+  color: hsl(0, 0%, 100%); /* 設定連結顏色 */
+  transition: color 0.3s ease; /* 加入顏色轉換效果 */
 }
 
+/* 主要導航連結文字樣式 */
 .primary-navigation a > span {
   font-weight: 700;
   margin-right: 0.5em;
+  color: inherit; /* 繼承連結顏色 */
 }
 
+/* 移动导航按钮样式 */
 .mobile-nav-toggle {
   display: none;
 }
 
-@media (max-width: 85rem) { /*欄位轉換*/
+/* 媒体查询 (最大宽度 85rem) */
+@media (max-width: 85rem) {
+  /* 主要导航样式 (移动设备) */
   .primary-navigation {
     --underline-gap: .5rem;
     position: fixed;
@@ -407,12 +441,16 @@ picutre {
     transform: translateX(100%);
     transition: transform 500ms ease-in-out;
   }
+
   .primary-navigation[data-visible=true] {
     transform: translateX(0);
   }
+
   .primary-navigation.underline-indicators > .active {
     border: 0;
   }
+
+  /* 移动导航按钮样式 (显示) */
   .mobile-nav-toggle {
     display: block;
     position: absolute;
@@ -427,14 +465,18 @@ picutre {
     aspect-ratio: 1;
     border: 0;
   }
+
   .mobile-nav-toggle[aria-expanded=true] {
     background-image: url(../assets/shared/icon-close.svg);
   }
+
   .mobile-nav-toggle:focus-visible {
     outline: 5px solid white;
     outline-offset: 5px;
   }
 }
+
+/* 媒体查询 (最小宽度 5em) */
 @media (min-width: 5em) {
   .primary-navigation {
     padding-inline: clamp(1rem, 3vw, 7rem);
@@ -442,11 +484,15 @@ picutre {
     width: 86vw;
   }
 }
-@media (min-width: 35em) and (max-width: 5em) { /*欄位變換*/
+
+/* 媒体查询 (最小宽度 35em，最大宽度 5em) */
+@media (min-width: 35em) and (max-width: 5em) {
   .primary-navigation a > span {
     display: none;
   }
 }
+
+/* 媒体查询 (最小宽度 85em) */
 @media (min-width: 85em) {
   .primary-header::after {
     content: "";
@@ -458,13 +504,17 @@ picutre {
     background: hsla(0, 0%, 100%, 0.25);
     order: 1;
   }
+
   nav {
     order: 2;
   }
+
   .primary-navigation {
     margin-block: 2rem;
   }
 }
+
+/* 下划线指示器样式 */
 .underline-indicators > * {
   cursor: pointer;
   padding: var(--underline-gap, 0.5rem) 0;
@@ -473,21 +523,27 @@ picutre {
   background-color: transparent;
 }
 
+/* 悬停和焦点状态下划线指示器样式 */
 .underline-indicators > *:hover,
 .underline-indicators > *:focus {
   border-color: hsla(0, 0%, 100%, 0.5);
+  /* 更改悬停和焦点状态下划线的颜色 */
 }
 
+/* 选中状态下划线指示器样式 */
 .underline-indicators > .active,
 .underline-indicators > [aria-selected=true] {
   color: hsl(0, 0%, 100%);
   border-color: hsl(0, 0%, 100%);
+  /* 更改选中状态下划线的颜色和文字颜色 */
 }
 
+/* 标签列表样式 */
 .tab-list {
   --gap: 2rem;
 }
 
+/* 圆点指示器样式 */
 .dot-indicators > * {
   cursor: pointer;
   border: 0;
@@ -505,6 +561,7 @@ picutre {
   background-color: hsl(0, 0%, 100%);
 }
 
+/* 数字指示器样式 */
 .numbers-indicators > * {
   cursor: pointer;
   width: 2em;
@@ -520,63 +577,84 @@ picutre {
   color: hsl(0, 0%, 100%);
 }
 
+/* 数字指示器样式，选中状态 */
 .numbers-indicators > [aria-selected=true] {
   background-color: hsl(0, 0%, 100%);
   color: hsl(230, 35%, 7%);
 }
 
+/* 数字指示器样式，鼠标悬停 */
 .numbers-indicators > *:hover {
   border: 1px solid hsla(0, 0%, 100%, 0.5);
 }
 
+/* 首页背景图片 */
 .home {
   background-image: url(../assets/home/background-home-mobile.jpg);
 }
 
+/* 不同设备尺寸的媒体查询 */
 @media (min-width: 45rem) {
   .home {
     background-position: center center;
     background-image: url(../assets/home/background-home-tablet.jpg);
   }
 }
+/* 在桌面端（45em 以上）的样式 */
 @media (min-width: 45em) {
+  /* 首页背景图片切换为桌面版本 */
   .home {
     background-image: url(../assets/home/background-home-desktop.jpg);
   }
+
+  /* 首页网格容器样式调整 */
   .grid-container--home {
+    /* 底部内边距，取最大值，确保至少 6rem，或 20vh */
     padding-bottom: max(6rem, 20vh);
     align-items: end;
   }
+
+  /* 首页网格容器第一个元素调整 */
   .grid-container--home > *:first-child {
+    /* 将第一个元素放置在第二列 */
     grid-column: 2;
   }
+
+  /* 首页网格容器最后一个元素调整 */
   .grid-container--home > *:last-child {
+    /* 将最后一个元素放置在第三列 */
     grid-column: 3;
   }
 }
+/* 目的地背景图片 */
 .destination {
   background-image: url(../assets/destination/background-destination-mobile.jpg);
 }
 
+/* 目的地网格容器样式 */
 .grid-container--destination {
   --flow-space: 2rem;
   grid-template-areas: "title" "image" "tabs" "content";
 }
 
+/* 目的地图片样式 */
 .grid-container--destination > picture {
   grid-area: image;
   max-width: 60%;
   align-self: start;
 }
 
+/* 目的地标签列表样式 */
 .grid-container--destination > .tab-list {
   grid-area: tabs;
 }
 
+/* 目的地信息样式 */
 .grid-container--destination > .destination-info {
   grid-area: content;
 }
 
+/* 目的地元数据样式 */
 .destination-meta {
   flex-direction: column;
   border-top: 1px solid hsla(0, 0%, 100%, 0.1);
@@ -584,10 +662,12 @@ picutre {
   margin-top: 2.5rem;
 }
 
+/* 目的地元数据段落样式 */
 .destination-meta p {
   font-size: 1.75rem;
 }
 
+/* 不同设备尺寸的媒体查询 */
 @media (min-width: 35em) {
   .destination {
     background-position: center center;
@@ -598,50 +678,67 @@ picutre {
     justify-content: space-evenly;
   }
 }
+/* 在 45em 以上的屏幕宽度下，目的地页面样式调整 */
 @media (min-width: 45em) {
+  /* 更改目的地背景图片 */
   .destination {
     background-image: url(../assets/destination/background-destination-desktop.jpg);
   }
+
+  /* 调整目的地网格容器样式 */
   .grid-container--destination {
+    /* 调整项目对齐方式 */
     justify-items: start;
+    /* 调整内容对齐方式 */
     align-content: start;
     grid-template-areas: ". title title ." ". image tabs ." ". image content .";
   }
+  /* 调整目的地图片最大宽度 */
   .grid-container--destination > picture {
     max-width: 90%;
   }
+  /* 调整目的地元数据样式 */
   .destination-meta {
+    /* 调整间距 */
     --gap: min(6vw, 6rem);
+    /* 调整内容对齐方式 */
     justify-content: start;
   }
 }
+/* 公告背景图片 */
 .announcement {
   background-image: url(../assets/announcement/background-announcement-mobile.jpg);
 }
 
+/* 公告网格容器样式 */
 .grid-container--announcement {
   --flow-space: 2rem;
   grid-template-areas: "title" "image" "tabs" "content";
 }
 
+/* 公告图片样式 */
 .grid-container--announcement > picture {
   grid-area: image;
   max-width: 60%;
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
 }
 
+/* 公告标签列表样式 */
 .grid-container--announcement > .dot-indicators {
   grid-area: tabs;
 }
 
+/* 公告详细信息样式 */
 .grid-container--announcement > .announcement-details {
   grid-area: content;
 }
 
+/* 公告详细信息标题样式 */
 .announcement-details h2 {
   color: hsla(0, 0%, 100%, 0.5);
 }
 
+/* 不同设备尺寸的媒体查询 */
 @media (min-width: 35em) {
   .announcement {
     background-position: center center;
@@ -657,43 +754,54 @@ picutre {
     background-image: url(../assets/announcement/background-announcement-desktop.jpg);
   }
   .grid-container--announcement {
-    grid-template-columns: minmax(1rem, 1fr) minmax(0, 37rem) minmax(0, 23rem) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 30rem) minmax(1rem, 1fr); /* 調整圖片和標題的寬度 */
     justify-items: start;
-    grid-template-areas: ". title title ." ". content image ." ". tabs image .";
+    grid-template-areas: " . title title ." ". content image ." ". tabs image ."; /* 調整網格區域，使圖片更寬 */
   }
   .grid-container--announcement > picture {
     grid-column: span 2;
     align-self: start;
-    max-width: 50%;
+    max-width: 50%; /* 保持圖片最大寬度 */
   }
 }
+/* 科技背景图片 */
 .technology {
   background-image: url(../assets/technology/background-technology-mobile.jpg);
 }
 
+/* 隐藏肖像样式 */
 .portrait {
   display: none;
 }
 
+/* 科技部分的容器样式 */
 .grid-container--technology {
   padding-inline: 0;
   grid-template-areas: "title" "image" "tabs" "content";
 }
+
+/* 科技部分的图片样式 */
 .grid-container--technology > picture {
   grid-area: image;
   max-width: 100vw;
 }
+
+/* 科技部分的标签指示器样式 */
 .grid-container--technology > .numbers-indicators {
   grid-area: tabs;
 }
+
+/* 科技部分的详细信息样式 */
 .grid-container--technology > .technology-details {
   grid-area: content;
 }
 
+/* 科技部分的标题颜色 */
 .technology-details h2 {
   color: hsla(0, 0%, 100%, 0.5);
 }
 
+/* 屏幕宽度大于 35em 时，科技部分的样式 */
 @media (min-width: 35em) {
   .technology {
     background-position: center center;
@@ -703,6 +811,8 @@ picutre {
     margin-left: 2rem;
   }
 }
+
+/* 屏幕宽度大于 45em 时，科技部分的样式 */
 @media (min-width: 45em) {
   .technology {
     background-image: url(../assets/technology/background-technology-desktop.jpg);
@@ -731,4 +841,4 @@ picutre {
     justify-self: end;
     max-width: 80%;
   }
-}/*# sourceMappingURL=index.css.map */
+}
