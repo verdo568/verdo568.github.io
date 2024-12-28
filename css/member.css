@@ -5,14 +5,6 @@ body {
     margin: 0;
     padding: 0;
 }
-.member-container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #333; /* 深色模式容器背景色 */
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 調整陰影透明度 */
-    border-radius: 5px;
-}
 .member-card {
     background-color: #444; /* 調整卡片背景色 */
     color: #eee; /* 調整卡片文字顏色 */
@@ -21,7 +13,14 @@ body {
     border-radius: 5px;
     display: flex; /* 使用 flexbox 排列圖片和文字 */
 }
-.member-image {
+.member-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #333; /* 深色模式容器背景色 */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 調整陰影透明度 */
+    border-radius: 5px;
+}.member-image {
     width: 150px; /* 固定圖片寬度 */
     height: 150px; /* 固定圖片高度 */
     margin-right: 20px; /* 圖片和文字之間的間距 */
@@ -30,6 +29,21 @@ body {
     object-fit: cover; /* 確保圖片保持比例並填滿框架 */
     flex-shrink: 0; /* 防止圖片因容器壓縮而縮小 */
 }
+
+/* 新增媒體查詢 */
+@media (max-width: 768px) {
+    .member-container {
+        width: 95%; /* 在窄螢幕上調整寬度 */
+    }
+
+    .member-image {
+        width: 100px; /* 縮小圖片尺寸 */
+        height: 100px;
+        margin-right: 20px; /* 圖片和文字之間的間距 */
+        margin-bottom: 1px; /* 增加底部間距 */
+    }
+}
+
 .member-image img {
     width: 100%;
     height: 100%;
