@@ -492,7 +492,7 @@ picture {
   }
 }
 
-/* 媒体查询 (最大宽度 55rem) */
+/* 媒体查询 (最大宽度 60rem) */
 @media (max-width: 55rem) {
   /* 主要导航样式 (移动设备) */
   .primary-navigation {
@@ -512,7 +512,7 @@ picture {
 @media (max-width: 80rem) {
   /* 主要导航样式 (移动设备) */
   .primary-navigation {
-    inset: 0 0 0 65%;
+    inset: 0 0 0 50%;
   }
 }
 
