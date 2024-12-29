@@ -13,7 +13,7 @@ body {
     background-color: #333; /* 深色模式容器背景色 */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 調整陰影透明度 */
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     align-items: flex-start; /* 將容器內的元素垂直置中 */
     justify-content: center; /* 將容器內的元素水平置中 */
@@ -24,13 +24,17 @@ body {
 /* 設定圖片區塊的padding */
 .image-section {
     flex: 1;
-    padding: 10px;
+    margin-right: 20px; /* 圖片和文字之間的間距 */
+    object-fit: cover; /* 確保圖片保持比例並填滿框架 */
 }
 
 /* 設定圖片的寬度和圓角 */
 .image-section img {
     max-width: 100%;
-    border-radius: 10px;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* 設定文字區塊的padding */
@@ -43,6 +47,7 @@ body {
 .text-section h2 {
     color: #BB86FC;
     margin-bottom: 20px;
+    
 }
 
 /* 設定文字區塊的p字體大小和line-height */
@@ -56,5 +61,11 @@ body {
     .container {
         flex-direction: row;
         text-align: left;
+    }
+    .image-section {
+        margin-right: 20px; /* 圖片和文字之間的間距 */
+        overflow: hidden; /* 避免圖片超出邊界 */
+        object-fit: cover; /* 確保圖片保持比例並填滿框架 */
+        flex-shrink: 0; /* 防止圖片因容器壓縮而縮小 */
     }
 }
