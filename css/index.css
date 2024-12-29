@@ -413,12 +413,12 @@ picture {
 
 /* 主要导航样式 */
 .primary-navigation {
-  --gap: clamp(1.5rem, 5vw, 3.5rem);
+  --gap: clamp(1.5rem, 4vw, 3rem);
   --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsla(0, 0%, 100%, 0.05);
+  background: hsla(230, 35%, 7%, 0.3);
   -webkit-backdrop-filter: blur(1.5rem);
           backdrop-filter: blur(1.5rem);
 }
@@ -442,16 +442,17 @@ picture {
   display: none;
 }
 
-/* 媒体查询 (最大宽度 85rem) */
-@media (max-width: 85rem) {
+/* 媒体查询 (最大宽度 95rem) */
+@media (max-width: 98rem) {
   /* 主要导航样式 (移动设备) */
   .primary-navigation {
     --underline-gap: .5rem;
     position: fixed;
     z-index: 1000;
     inset: 0 0 0 65%;
+    height: 100vh;
     list-style: none;
-    padding: min(20rem, 15vh) 2rem;
+    padding: min(20rem, 5vh) 2rem;
     margin: 0;
     flex-direction: column;
     transform: translateX(100%);
@@ -492,7 +493,7 @@ picture {
   }
 }
 
-/* 媒体查询 (最大宽度 60rem) */
+/* 媒体查询 (最大宽度 55rem) */
 @media (max-width: 55rem) {
   /* 主要导航样式 (移动设备) */
   .primary-navigation {
@@ -500,22 +501,28 @@ picture {
   }
 }
 
-/* 媒体查询 (最大宽度 55rem) */
+/* 媒体查询 (最大宽度 60rem) */
 @media (max-width: 60rem) {
   /* 主要导航样式 (移动设备) */
   .primary-navigation {
-    inset: 0 0 0 50%;
+    inset: 0 0 0 55%;
   }
 }
 
-/* 媒体查询 (最大宽度 55rem) */
+/* 媒体查询 (最大宽度 80rem) */
 @media (max-width: 80rem) {
   /* 主要导航样式 (移动设备) */
   .primary-navigation {
-    inset: 0 0 0 50%;
+    inset: 0 0 0 60%;
   }
 }
-
+/* 媒体查询 (最大宽度 15rem) */
+@media (max-width: 15rem) {
+  /* 主要导航样式 (移动设备) */
+  .primary-navigation {
+    inset: 0 0 0 30%;
+  }
+}
 /* 媒体查询 (最小宽度 5em) */
 @media (min-width: 5em) {
   .primary-navigation {
