@@ -512,7 +512,7 @@ picture {
 @media (max-width: 80rem) {
   /* 主要导航样式 (移动设备) */
   .primary-navigation {
-    inset: 0 0 0 53%;
+    inset: 0 0 0 52%;
   }
 }
 /* 媒体查询 (最大宽度 15rem) */
