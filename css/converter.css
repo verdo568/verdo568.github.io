@@ -75,7 +75,7 @@ h1 {
     font-size: smaller;
 }
 .search-bar {
-    width: calc(40% - 20px);
+    width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid #555;
     border-radius: 4px;
