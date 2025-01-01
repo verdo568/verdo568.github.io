@@ -18,17 +18,17 @@
 <body>
     <div class="container">
         <h1>價目欄&匯率表</h1>
-
         <div class="price-table">
             <h2>價格列表</h2>
-            <table>
-                <thead>
+            <input type="text" id="searchInput" class="search-bar" placeholder="搜尋商品...">
+            <table id="priceTable">
+                <thead class="exclude-search">
                     <tr>
                         <th>貨幣</th>
                         <th>匯率</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="exclude-search">
                     <tr>
                         <td>銅錠</td>
                         <td>6 銅錠 換 1 金錠</td>
@@ -46,10 +46,10 @@
                       <td>為最高面額</td>
                     </tr>
                 </tbody>
-                <thead><tr>
+                <thead>
                     <th>商品</th>
                     <th>價格</th>
-                </tr></thead>
+                </thead>
                 <tbody>
                     <tr>
                         <td>遠古遺骸</td>
@@ -167,7 +167,45 @@
 
             <div class="result" id="item-result"></div>
         </div>
-
     </div>
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            
+            // 篩選價格表中的行
+            const rows = document.querySelectorAll('#priceTable tbody tr');
+            rows.forEach(row => {
+                // 跳過具有 class 'exclude-search' 的行
+                if (row.closest('.exclude-search')) {
+                    return;
+                }
+                const productName = row.cells[0].textContent.toLowerCase();
+                if (productName.includes(filter)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+    
+            // 篩選商品選擇器中的選項
+            const options = document.querySelectorAll('#item option');
+            let hasVisibleOption = false;
+    
+            options.forEach(option => {
+                const text = option.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    option.style.display = '';
+                    hasVisibleOption = true; // 如果有匹配的項目，標記為可見
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+    
+            // 根據是否有可見的選項決定是否顯示整個 .converter
+            const converter = document.querySelector('.converter');
+            converter.style.display = hasVisibleOption ? '' : 'none';
+        });
+    </script>
+    
 </body>
 </html>

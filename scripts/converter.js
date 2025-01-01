@@ -184,3 +184,4 @@ function convertCurrency() {
 
     document.getElementById('currency-result').innerText = `使用 ${amount} 單位的 ${currency1Name}，相當於約 ${result.toFixed(2)} 單位的 ${currency2Name}。`;
 }
+

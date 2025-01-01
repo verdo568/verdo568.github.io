@@ -74,3 +74,11 @@ h1 {
     margin-top: 4px;
     font-size: smaller;
 }
+.search-bar {
+    width: calc(40% - 20px);
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #262626;
+    color: #ffffff;
+}
