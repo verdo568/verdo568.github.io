@@ -1,5 +1,5 @@
       // 使用 fetch 讀取外部的 JSON 檔案
-      fetch('announcements.json')  // 假設 announcements.json 檔案在同一資料夾中
+      fetch('../json/announcements.json')  // 假設 announcements.json 檔案在同一資料夾中
           .then(response => response.json())  // 將回應轉換為 JSON 物件
           .then(announcementsData => {
               const container = document.getElementById("announcement-container");
