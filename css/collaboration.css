@@ -101,7 +101,7 @@ body {
 }
 
 .modal-content {
-    margin: 50px auto; /* 居中顯示 */
+    margin: 60px auto; /* 居中顯示 */
     display: block; /* 確保圖片顯示 */
     max-width: 80%;
     max-height: 80%;
