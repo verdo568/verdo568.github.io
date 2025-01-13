@@ -1,0 +1,39 @@
+{
+  "collaborations": [
+      {
+        "name": "築夢伺服器",
+        "status": "合作中",
+        "statusColor": "greenyellow",
+        "image": "../assets/collaboration/26581060655.png",
+        "alt": "合作書"
+      },
+      {
+        "name": "大晉民國",
+        "status": "合作中",
+        "statusColor": "greenyellow",
+        "image": "../assets/collaboration/received_927300239204467.jpg",
+        "alt": "合作書"
+      },
+      {
+        "name": "薯條伺服器",
+        "status": "合作中",
+        "statusColor": "greenyellow",
+        "image": "../assets/collaboration/454656873_520765793742991_4079187364235281151_n.jpg",
+        "alt": "合作書"
+      },
+      {
+        "name": "國中の日常",
+        "status": "合作中",
+        "statusColor": "greenyellow",
+        "image": "../assets/collaboration/457442623_1211612943213875_7158405656890800170_n.jpg",
+        "alt": "合作書"
+      },
+      {
+        "name": "梗圖分享&廢文社",
+        "status": "已解除合作",
+        "statusColor": "red",
+        "image": "../assets/collaboration/454813112_1187231365923971_6432232844949107706_n.jpg",
+        "alt": "合作書"
+      }
+    ]
+  }
