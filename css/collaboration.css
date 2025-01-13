@@ -115,11 +115,11 @@ body {
 }
 @keyframes zoomIn {
     from {
-        transform: scale(0.7);
+        transform: scale(0.7);/* 初始狀態：縮小到70% */
         opacity: 0;
     }
     to {
-        transform: scale(1);
+        transform: scale(1);/* 最終狀態：正常大小 */
         opacity: 1;
     }
 }
