@@ -539,7 +539,7 @@ picture {
 }
 
 /* 媒体查询 (最小宽度 85em) */
-@media (min-width: 85em) {
+@media (min-width: 97em) {
   .primary-header::after {
     content: "";
     display: block;

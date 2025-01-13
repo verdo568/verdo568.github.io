@@ -1,10 +1,12 @@
-fetch('../json/collaboration.json') // 假設 JSON 檔案和 HTML 位於同一目錄
+fetch('../json/collaboration.json')
       .then(response => response.json())
       .then(data => {
         const container = document.getElementById('collaboration-container');
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
 
         data.collaborations.forEach(item => {
-          // 建立合作夥伴的 HTML 結構
+          // 創建合作夥伴的 HTML 結構
           const collaborationDiv = document.createElement('div');
           collaborationDiv.classList.add('container');
 
@@ -14,6 +16,12 @@ fetch('../json/collaboration.json') // 假設 JSON 檔案和 HTML 位於同一�
           const img = document.createElement('img');
           img.src = item.image;
           img.alt = item.alt;
+          img.style.cursor = 'pointer'; // 指標變成手型
+          img.addEventListener('click', () => {
+            // 點擊圖片時顯示模態框
+            modal.style.display = 'block';
+            modalImage.src = item.image;
+          });
           imageSection.appendChild(img);
 
           const textSection = document.createElement('div');
@@ -28,12 +36,17 @@ fetch('../json/collaboration.json') // 假設 JSON 檔案和 HTML 位於同一�
           textSection.appendChild(name);
           textSection.appendChild(status);
 
-          // 將圖片區塊和文字區塊加入到容器中
+          // 將圖片和文字加入容器
           collaborationDiv.appendChild(imageSection);
           collaborationDiv.appendChild(textSection);
 
-          // 將合作夥伴容器加入到主容器中
+          // 將合作夥伴容器加入主容器
           container.appendChild(collaborationDiv);
+        });
+
+        // 點擊模態框關閉
+        modal.addEventListener('click', () => {
+          modal.style.display = 'none';
         });
       })
       .catch(error => console.error('Error loading collaborations:', error));
