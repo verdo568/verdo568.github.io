@@ -1,5 +1,5 @@
 // 使用 fetch 讀取外部的 JSON 檔案
-fetch('/json/announcements.json') // 請確認這裡是 JSON 文件的正確路徑
+fetch('/json/announcements.json') // 確保這是 JSON 文件的正確路徑
     .then(response => {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         return response.json();
@@ -53,12 +53,18 @@ fetch('/json/announcements.json') // 請確認這裡是 JSON 文件的正確路�
             container.appendChild(announcementDiv);
         });
 
-        // 加載完成後，根據 hash 滾動到對應公告
+        // 加載完成後，根據 hash 滾動到對應公告並閃爍
         const hash = window.location.hash.substring(1); // 獲取 hash（不包含 #）
         if (hash) {
             const targetElement = document.getElementById(hash);
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+
+                // 啟動閃爍效果
+                targetElement.classList.add("highlight");
+                setTimeout(() => {
+                    targetElement.classList.remove("highlight");
+                }, 650); // 閃爍3秒後移除效果
             }
         }
     })

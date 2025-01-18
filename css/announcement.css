@@ -31,6 +31,24 @@ body {
         width: 800px;
     }
 }
+.highlight {
+    animation: blink 1s ease-out 3; /* 每秒一次，持續3次 */
+}
+
+@keyframes blink {
+    0% {
+        background-color: #BB86FC;
+        border-color: #BB86FC;
+    }
+    50% {
+        background-color: #e6e6ff;
+        border-color: #e6e6ff;
+    }
+    100% {
+        background-color: #BB86FC;
+        border-color: #BB86FC;
+    }
+}
 
 /* 手機時候特定樣式 */
 @media (max-width: 799px) {
