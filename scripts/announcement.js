@@ -92,7 +92,7 @@ fetch('/json/announcements.json')  // 請確保這是 JSON 文件的正確路徑
                     targetElement.classList.add("highlight");
                     setTimeout(() => {
                         targetElement.classList.remove("highlight");
-                    }, 850); // 閃爍 3 秒後移除效果
+                    }, 3000); // 閃爍 3 秒後移除效果
                 }
             }
         }
@@ -122,6 +122,9 @@ fetch('/json/announcements.json')  // 請確保這是 JSON 文件的正確路徑
                     window.location.hash = `#${i}`;
                     renderPage(targetPage);
                     renderPagination();
+
+                    // 滾動到頁面最上方
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
 
                 pagination.appendChild(pageLink);
