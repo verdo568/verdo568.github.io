@@ -49,6 +49,38 @@ body {
         border-color: #BB86FC;
     }
 }
+/* 設置頁碼容器的樣式 */
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* 每個頁碼的框框樣式 */
+.pagination-link {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #BB86FC; /* 頁碼顏色 */
+    text-decoration: none;
+    border: 2px solid #BB86FC; /* 框的顏色 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 當頁碼為當前頁時，突出顯示 */
+.pagination-link.active {
+    background-color: #BB86FC;
+    color: white;
+}
+
+/* 滑鼠懸停時改變背景色 */
+.pagination-link:hover {
+    background-color: #BB86FC;
+    color: white;
+}
+
 
 /* 手機時候特定樣式 */
 @media (max-width: 799px) {
