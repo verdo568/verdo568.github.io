@@ -31,10 +31,12 @@ fetch('/json/announcements.json') // 請確認這裡是 JSON 文件的正確路�
             // 複製公告連結功能
             const link = `${window.location.origin}${window.location.pathname}#${announcement.id}`;
             const copyLinkText = document.createElement("span");
-            copyLinkText.textContent = "複製此公告連結";
+            copyLinkText.textContent = "複製公告連結";
             copyLinkText.classList.add("copy-link-text");
             copyLinkText.style.color = "#BB86FC"; // 設置文字顏色
             copyLinkText.style.cursor = "pointer"; // 設置為可點擊
+
+            // 點擊複製並跳轉到對應的公告
             copyLinkText.addEventListener("click", () => {
                 navigator.clipboard.writeText(link)
                     .then(() => alert("公告連結已複製到剪貼簿！"))
@@ -50,5 +52,14 @@ fetch('/json/announcements.json') // 請確認這裡是 JSON 文件的正確路�
 
             container.appendChild(announcementDiv);
         });
+
+        // 加載完成後，根據 hash 滾動到對應公告
+        const hash = window.location.hash.substring(1); // 獲取 hash（不包含 #）
+        if (hash) {
+            const targetElement = document.getElementById(hash);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
     })
     .catch(error => console.error('Error loading announcements:', error)); // 錯誤處理
