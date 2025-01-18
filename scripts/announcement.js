@@ -92,7 +92,7 @@ fetch('/json/announcements.json')  // 請確保這是 JSON 文件的正確路徑
                     targetElement.classList.add("highlight");
                     setTimeout(() => {
                         targetElement.classList.remove("highlight");
-                    }, 3000); // 閃爍 3 秒後移除效果
+                    }, 850); // 閃爍 3 秒後移除效果
                 }
             }
         }
