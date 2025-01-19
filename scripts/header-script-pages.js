@@ -1,5 +1,5 @@
 // 從 script 標籤的 data-json 屬性中獲取 JSON 文件地址
-const scriptTag = document.querySelector('script[src="scripts/header-script.js"]');
+const scriptTag = document.querySelector('script[src="../scripts/header-script-pages.js"]');
 const jsonPath = scriptTag.getAttribute('data-json');
 
 if (jsonPath) {
