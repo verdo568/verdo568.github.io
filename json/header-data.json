@@ -93,6 +93,12 @@
             "rel": "noopener noreferrer"
           }
         ]
+      },
+      {
+        "text": "2048",
+        "href": "https://verdo568.github.io/games/2048",
+        "ariaHidden": "08",
+        "target": "_blank"
       }
     ]
   }
