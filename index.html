@@ -13,6 +13,18 @@
     <script src="scripts/nav.js" defer></script>
     <script src="scripts/header-script.js" data-json="json/header-data.json" defer></script>
 </head>
+<head><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+      function googleTranslateElementInit() {
+          new google.translate.TranslateElement({
+              pageLanguage: 'zh-TW',
+              includedLanguages: 'zh-TW,zh-CN,en,ja,th,vi,ko,id',
+              gaTrack: true
+          }, 'google_translate_element');
+          $('select.goog-te-combo').attr('title', 'translate');
+      }
+  </script>
+  </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W49DBFB1S5"></script>
 <script>
@@ -23,6 +35,7 @@
 </script>
 <body class="home">
   <div id="header-container"></div>
+  <div id="google_translate_element"></div>
   <main id="main" class="grid-container grid-container--home">
     <div>
       <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
