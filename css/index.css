@@ -39,16 +39,6 @@ textarea,
 select {
   font: inherit;
 }
-#google_translate_element {
-  position: fixed;
-  top: 10px; /* 距離螢幕頂部 10px */
-  right: 10px; /* 距離螢幕右側 10px */
-  z-index: 1000; /* 確保在其他元素上方 */
-  background-color: rgba(255, 255, 255, 0.8); /* 可選：增加背景以增強可讀性 */
-  padding: 5px; /* 可選：增加內距 */
-  border-radius: 5px; /* 可選：使外框圓角 */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 可選：添加陰影效果 */
-}
 
 /* 移除動畫 (針對偏好減少動畫的使用者) */
 @media (prefers-reduced-motion: reduce) {

@@ -36,26 +36,27 @@
   <div id="announcement-container"></div>
   <div id="pagination" class="pagination"></div>
   <div id="pagination"></div>
+  <div id="translate"><select id="translateSelectLanguage" class="translateSelectLanguage"><option value="chinese_traditional" selected="selected">繁體中文</option><option value="english">English</option></select></div>
 </body>
 <script>
-  translate.ignore.tag.push('chinese_traditional'); //翻译时追加上自己想指定忽略的tag标签，凡是在这里面的，都不进行翻译。
-  translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，自动识别其所在国家的语种进行切换
-  translate.nomenclature.append('chinese_traditional','english',`
-  維爾多=Verdo
-  維爾多官網=Verdo official website
-  法規資料庫=Rules
-  價目欄&匯率表=Price List & Exchange Rates
-  中央政府成員=Government Members
-  合作夥伴=Partners
-  群組連結=Invite Link
-  維爾多群規=Verdo group rules
-  伺服器刑法=Server Criminal Law
-  服民議會法=National Assembly
-  公會法=Guild Law
-  政黨法=Political Party Law
-  歡迎各位加入維爾多！ 維爾多是個擁有Minecraft伺服器和兼備聊天群的好地方。 我們主群主要是聊日常生活， 也可以聊遊戲或詢問課業喔！ 你還在等什麼？ 快來加入吧！=Welcome, everyone, to Verdo!Verdo is a great place that features a Minecraft server along with a chat group.Our main group is for chatting about daily life, but you can also talk about games or ask questions about schoolwork!What are you waiting for? Come and join us now!`);
-  translate.selectLanguageTag.languages = 'chinese_traditional,english';
-  translate.service.use('client.edge');
-  translate.execute();
-  </script>
+translate.ignore.tag.push('chinese_traditional'); //翻译时追加上自己想指定忽略的tag标签，凡是在这里面的，都不进行翻译。
+translate.setUseVersion2(); //设置使用v2.x 版本
+translate.nomenclature.append('chinese_traditional','english',`
+維爾多=Verdo
+維爾多官網=Verdo official website
+法規資料庫=Rules
+價目欄&匯率表=Price List & Exchange Rates
+中央政府成員=Government Members
+合作夥伴=Partners
+群組連結=Invite Link
+維爾多群規=Verdo group rules
+伺服器刑法=Server Criminal Law
+服民議會法=National Assembly
+公會法=Guild Law
+政黨法=Political Party Law
+歡迎各位加入維爾多！ 維爾多是個擁有Minecraft伺服器和兼備聊天群的好地方。 我們主群主要是聊日常生活， 也可以聊遊戲或詢問課業喔！ 你還在等什麼？ 快來加入吧！=Welcome, everyone, to Verdo!Verdo is a great place that features a Minecraft server along with a chat group.Our main group is for chatting about daily life, but you can also talk about games or ask questions about schoolwork!What are you waiting for? Come and join us now!`);
+translate.selectLanguageTag.languages = 'chinese_traditional,english';
+translate.service.use('client.edge');
+translate.execute();
+</script>
 </html>
