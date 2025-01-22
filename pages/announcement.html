@@ -9,12 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/announcement.css">
     <title>公告</title>
     <script src="../scripts/nav.js" defer></script>
     <script src="../scripts/header-script-pages.js" data-json="../json/announcement_header-data.json" defer></script>
     <script src="../scripts/announcement.js" defer></script>
-    <link rel="stylesheet" href="../css/announcement.css">
+    <script src="https://cdn.staticfile.net/translate.js/3.5.1/translate.js"></script>
+    
 </head>
+<style>
+  .translateSelectLanguage{
+      position: absolute;
+      top:100px;
+      right:100px;
+  }
+  </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W49DBFB1S5"></script>
 <script>
@@ -27,5 +36,26 @@
   <div id="announcement-container"></div>
   <div id="pagination" class="pagination"></div>
   <div id="pagination"></div>
-  </body>
+</body>
+<script>
+  translate.ignore.tag.push('chinese_traditional'); //翻译时追加上自己想指定忽略的tag标签，凡是在这里面的，都不进行翻译。
+  translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，自动识别其所在国家的语种进行切换
+  translate.nomenclature.append('chinese_traditional','english',`
+  維爾多=Verdo
+  維爾多官網=Verdo official website
+  法規資料庫=Rules
+  價目欄&匯率表=Price List & Exchange Rates
+  中央政府成員=Government Members
+  合作夥伴=Partners
+  群組連結=Invite Link
+  維爾多群規=Verdo group rules
+  伺服器刑法=Server Criminal Law
+  服民議會法=National Assembly
+  公會法=Guild Law
+  政黨法=Political Party Law
+  歡迎各位加入維爾多！ 維爾多是個擁有Minecraft伺服器和兼備聊天群的好地方。 我們主群主要是聊日常生活， 也可以聊遊戲或詢問課業喔！ 你還在等什麼？ 快來加入吧！=Welcome, everyone, to Verdo!Verdo is a great place that features a Minecraft server along with a chat group.Our main group is for chatting about daily life, but you can also talk about games or ask questions about schoolwork!What are you waiting for? Come and join us now!`);
+  translate.selectLanguageTag.languages = 'chinese_traditional,english';
+  translate.service.use('client.edge');
+  translate.execute();
+  </script>
 </html>

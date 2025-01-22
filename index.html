@@ -12,7 +12,7 @@
     <title>維爾多官網</title>
     <script src="scripts/nav.js" defer></script>
     <script src="scripts/header-script.js" data-json="json/header-data.json" defer></script>
-    <script src="https://res.zvo.cn/translate/translate.js"></script>
+    <script src="https://cdn.staticfile.net/translate.js/3.1.5/translate.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W49DBFB1S5"></script>
@@ -48,7 +48,7 @@ translate.setAutoDiscriminateLocalLanguage();	//设置用户第一次用时，�
 translate.setUseVersion2(); //设置使用v2.x 版本
 translate.nomenclature.append('chinese_traditional','english',`
 維爾多=Verdo
-官網=official website
+維爾多官網=Verdo official website
 法規資料庫=Rules
 價目欄&匯率表=Price List & Exchange Rates
 中央政府成員=Government Members
@@ -61,6 +61,7 @@ translate.nomenclature.append('chinese_traditional','english',`
 政黨法=Political Party Law
 歡迎各位加入維爾多！ 維爾多是個擁有Minecraft伺服器和兼備聊天群的好地方。 我們主群主要是聊日常生活， 也可以聊遊戲或詢問課業喔！ 你還在等什麼？ 快來加入吧！=Welcome, everyone, to Verdo!Verdo is a great place that features a Minecraft server along with a chat group.Our main group is for chatting about daily life, but you can also talk about games or ask questions about schoolwork!What are you waiting for? Come and join us now!`);
 translate.selectLanguageTag.languages = 'chinese_traditional,english';
+translate.service.use('client.edge');
 translate.execute();
 </script>
 </html>
