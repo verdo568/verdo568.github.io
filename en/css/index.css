@@ -475,7 +475,7 @@ picture {
     right: 1rem;
     top: 2rem;
     background: transparent;
-    background-image: url(../assets/shared/icon-hamburger.svg);
+    background-image: url(https://verdo568.github.io/assets/shared/icon-hamburger.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 1.5rem;
@@ -484,7 +484,7 @@ picture {
   }
 
   .mobile-nav-toggle[aria-expanded=true] {
-    background-image: url(../assets/shared/icon-close.svg);
+    background-image: url(https://verdo568.github.io/assets/shared/icon-close.svg);
   }
 
   .mobile-nav-toggle:focus-visible {
@@ -636,21 +636,21 @@ picture {
 
 /* 首页背景图片 */
 .home {
-  background-image: url(../assets/home/background-home-mobile.jpg);
+  background-image: url(https://verdo568.github.io/assets/home/background-home-mobile.jpg);
 }
 
 /* 不同设备尺寸的媒体查询 */
 @media (min-width: 45rem) {
   .home {
     background-position: center center;
-    background-image: url(../assets/home/background-home-tablet.jpg);
+    background-image: url(https://verdo568.github.io/assets/home/background-home-tablet.jpg);
   }
 }
 /* 在桌面端（45em 以上）的样式 */
 @media (min-width: 45em) {
   /* 首页背景图片切换为桌面版本 */
   .home {
-    background-image: url(../assets/home/background-home-desktop.jpg);
+    background-image: url(https://verdo568.github.io/assets/home/background-home-desktop.jpg);
   }
 
   /* 首页网格容器样式调整 */
@@ -674,7 +674,7 @@ picture {
 }
 /* 目的地背景图片 */
 .destination {
-  background-image: url(../assets/destination/background-destination-mobile.jpg);
+  background-image: url(https://verdo568.github.io/assets/destination/background-destination-mobile.jpg);
 }
 
 /* 目的地网格容器样式 */
@@ -717,7 +717,7 @@ picture {
 @media (min-width: 35em) {
   .destination {
     background-position: center center;
-    background-image: url(../assets/destination/background-destination-tablet.jpg);
+    background-image: url(https://verdo568.github.io/assets/destination/background-destination-tablet.jpg);
   }
   .destination-meta {
     flex-direction: row;
@@ -728,7 +728,7 @@ picture {
 @media (min-width: 45em) {
   /* 更改目的地背景图片 */
   .destination {
-    background-image: url(../assets/destination/background-destination-desktop.jpg);
+    background-image: url(https://verdo568.github.io/assets/destination/background-destination-desktop.jpg);
   }
 
   /* 调整目的地网格容器样式 */
@@ -753,7 +753,7 @@ picture {
 }
 /* 公告背景图片 */
 .announcement {
-  background-image: url(../assets/announcement/background-announcement-mobile.jpg);
+  background-image: url(https://verdo568.github.io/assets/announcement/background-announcement-mobile.jpg);
 }
 
 /* 公告网格容器样式 */
@@ -788,7 +788,7 @@ picture {
 @media (min-width: 35em) {
   .announcement {
     background-position: center center;
-    background-image: url(../assets/announcement/background-announcement-tablet.jpg);
+    background-image: url(https://verdo568.github.io/assets/announcement/background-announcement-tablet.jpg);
   }
   .grid-container--announcement {
     padding-bottom: 0;
@@ -797,7 +797,7 @@ picture {
 }
 @media (min-width: 45em) {
   .announcement {
-    background-image: url(../assets/announcement/background-announcement-desktop.jpg);
+    background-image: url(https://verdo568.github.io/assets/announcement/background-announcement-desktop.jpg);
   }
   .grid-container--announcement {
     grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 30rem) minmax(1rem, 1fr); /* 調整圖片和標題的寬度 */
@@ -812,7 +812,7 @@ picture {
 }
 /* 科技背景图片 */
 .technology {
-  background-image: url(../assets/technology/background-technology-mobile.jpg);
+  background-image: url(https://verdo568.github.io/assets/technology/background-technology-mobile.jpg);
 }
 
 /* 隐藏肖像样式 */
@@ -851,7 +851,7 @@ picture {
 @media (min-width: 35em) {
   .technology {
     background-position: center center;
-    background-image: url(../assets/technology/background-technology-tablet.jpg);
+    background-image: url(https://verdo568.github.io/assets/technology/background-technology-tablet.jpg);
   }
   .grid-container--technology > h1 {
     margin-left: 2rem;
@@ -861,7 +861,7 @@ picture {
 /* 屏幕宽度大于 45em 时，科技部分的样式 */
 @media (min-width: 45em) {
   .technology {
-    background-image: url(../assets/technology/background-technology-desktop.jpg);
+    background-image: url(https://verdo568.github.io/assets/technology/background-technology-desktop.jpg);
   }
   .portrait {
     display: block;
