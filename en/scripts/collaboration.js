@@ -1,4 +1,4 @@
-fetch('../json/collaboration.json')
+fetch('https://verdo568.github.io/en_json/collaboration.json')
       .then(response => response.json())
       .then(data => {
         const container = document.getElementById('collaboration-container');
