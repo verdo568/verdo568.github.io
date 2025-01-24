@@ -1,0 +1,99 @@
+{
+    "logo": {
+      "href": "https://verdo568.github.io",
+      "src": "../assets/shared/logo.svg",
+      "alt": "space tourism logo"
+    },
+    "menuToggle": {
+      "ariaControls": "primary-navigation",
+      "srOnlyText": "Menu",
+      "ariaExpanded": false
+    },
+    "navigation": [
+      {
+        "text": "首頁",
+        "href": "https://verdo568.github.io",
+        "ariaHidden": "00"
+      },
+      {
+        "text": "公告",
+        "href": "https://verdo568.github.io/pages/announcement",
+        "ariaHidden": "01"
+      },
+      {
+        "text": "中央政府成員",
+        "href": "https://verdo568.github.io/pages/members",
+        "ariaHidden": "02"
+      },
+      {
+        "text": "合作夥伴",
+        "href": "https://verdo568.github.io/pages/collaboration",
+        "ariaHidden": "03",
+        "class": "active"
+      },
+      {
+        "text": "價目欄&匯率表",
+        "href": "https://verdo568.github.io/pages/converter",
+        "ariaHidden": "04",
+        "target": "_blank"
+      },
+      {
+        "text": "部落格",
+        "href": "https://verdo568.github.io/bloger",
+        "ariaHidden": "05",
+        "target": "_blank"
+      },
+      {
+        "text": "法規資料庫",
+        "dropdown": true,
+        "ariaHidden": "06",
+        "items": [
+          {
+            "text": "維爾多群規",
+            "href": "https://verdo568.github.io/bloger/Law/verdo-Group-rules",
+            "target": "_blank"
+          },
+          {
+            "text": "伺服器刑法",
+            "href": "https://verdo568.github.io/bloger/Law/server-criminal-law",
+            "target": "_blank"
+          },
+          {
+            "text": "服民議會法",
+            "href": "https://verdo568.github.io/bloger/Law/national-assembly",
+            "target": "_blank"
+          },
+          {
+            "text": "公會法",
+            "href": "https://verdo568.github.io/bloger/Law/guild-law",
+            "target": "_blank"
+          },
+          {
+            "text": "政黨法",
+            "href": "https://verdo568.github.io/bloger/Law/political-party-law",
+            "target": "_blank"
+          }
+        ]
+      },
+      {
+        "text": "群組連結",
+        "dropdown": true,
+        "ariaHidden": "07",
+        "items": [
+          {
+            "text": "Discrod",
+            "href": "https://discord.com/invite/rAnxpb4kzb",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          },
+          {
+            "text": "Messenger",
+            "href": "https://m.me/j/AbaarUyefrIDgvWY/",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+          }
+        ]
+      }
+    ]
+  }
+  
