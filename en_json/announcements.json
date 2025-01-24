@@ -2,122 +2,122 @@
   "announcements": [
     {
       "id": "announcement-20",
-      "header": "【管理層公告】#20",
-      "body": "因應管理員大部分正在學測，因此1/20下午三點前不開服",
+      "header": "[Management Announcement] #20",
+      "body": "Due to most administrators taking the academic test, the server will not open before 3 PM on 1/20.",
       "footer": "Posted on: 2025/01/18 21:52 | "
     },
     {
       "id": "announcement-19",
-      "header": "【管理層公告】#19",
-      "body": "本伺服器最低支援版本為1.21.4",
+      "header": "[Management Announcement] #19",
+      "body": "The minimum supported version of the server is 1.21.4.",
       "footer": "Posted on: 2025/01/12 00:40 | "
     },
     {
       "id": "announcement-18",
-      "header": "【管理層公告】#18",
-      "body": "本伺服器最低支援版本為1.21.3",
+      "header": "[Management Announcement] #18",
+      "body": "The minimum supported version of the server is 1.21.3.",
       "footer": "Posted on: 2024/11/03 15:10 | "
     },
     {
       "id": "announcement-17",
-      "header": "【管理層公告】#17",
-      "body": "經管理層決議，與梗圖分享&廢文社終止一切合作關係，相關人員應於2024/10/28 11:59前離開本群",
+      "header": "[Management Announcement] #17",
+      "body": "After a management decision, all cooperation with the Meme Sharing & Idle Writing Society has been terminated. Relevant personnel must leave the group before 11:59 AM on 2024/10/28.",
       "footer": "Posted on: 2024/10/28 21:04 | "
     },
     {
       "id": "announcement-16",
-      "header": "【管理層公告】#16",
-      "body": "遊戲id名為 Max8857的玩家因未在期限內表明身份，故已清除玩家資料並列入伺服器封鎖名單",
+      "header": "[Management Announcement] #16",
+      "body": "The player with the game ID 'Max8857' has been removed from the server and blacklisted due to failure to identify themselves within the deadline.",
       "footer": "Posted on: 2024/10/13 12:04 | "
     },
     {
       "id": "announcement-15",
-      "header": "【管理層公告】#15",  
-      "body": "維爾多已與Discord群組\"波特蘭後花園\"建立邦交，詳情請去維爾多DC群組之\"波特蘭後花園大使館\"頻道查看",
+      "header": "[Management Announcement] #15",
+      "body": "Verdo has established diplomatic relations with the Discord group \"Portland Backyard.\" For details, please check the \"Portland Backyard Embassy\" channel in Verdo's Discord group.",
       "footer": "Posted on: 2024/10/08 16:19 | "
     },
     {
       "id": "announcement-14",
-      "header": "【管理層公告】#14",
-      "body": "新的官網 <a href=\"https://sites.google.com/view/verdo1116/home\" target=\"_blank\">https://sites.google.com/view/verdo1116/home</a>(更新:現已廢棄)",
+      "header": "[Management Announcement] #14",
+      "body": "New official website: <a href=\"https://sites.google.com/view/verdo1116/home\" target=\"_blank\">https://sites.google.com/view/verdo1116/home</a> (Update: Now deprecated).",
       "footer": "Posted on: 2024/10/02 15:36 | "
     },
     {
       "id": "announcement-13",
-      "header": "【管理層公告】#13",
-      "body": "伺服器已開啟白名單，進不去的請到DC開客服單",
+      "header": "[Management Announcement] #13",
+      "body": "The server has enabled a whitelist. If you cannot join, please open a support ticket on Discord.",
       "footer": "Posted on: 2024/09/22 11:44 | "
     },
     {
       "id": "announcement-12",
-      "header": "【管理層公告】#12",
-      "body": "服民議會法已上線 <a href=\"https://verdo568.github.io/bloger/Law/national-assembly.html\" target=\"_blank\">https://verdo568.github.io/bloger/Law/national-assembly.html</a>",
+      "header": "[Management Announcement] #12",
+      "body": "The National Assembly Law is now online: <a href=\"https://verdo568.github.io/bloger/Law/national-assembly.html\" target=\"_blank\">https://verdo568.github.io/bloger/Law/national-assembly.html</a>",
       "footer": "Posted on: 2024/09/21 20:36 | "
     },
     {
       "id": "announcement-11",
-      "header": "【管理層公告】#11", 
-      "body": "政黨法已上線，未來將有重大事件會用到 <a href=\"https://verdo568.github.io/bloger/Law/political-party-law.html\" target=\"_blank\">https://verdo568.github.io/bloger/Law/political-party-law.html",
+      "header": "[Management Announcement] #11",
+      "body": "The Political Party Law is now online and will be used in major future events: <a href=\"https://verdo568.github.io/bloger/Law/political-party-law.html\" target=\"_blank\">https://verdo568.github.io/bloger/Law/political-party-law.html</a>",
       "footer": "Posted on: 2024/09/21 10:04 | "
     },
     {
       "id": "announcement-10",
-      "header": "【管理層公告】#10",
-      "body": "伺服器刑法的第一章有增修，請去以下網站看一下",
+      "header": "[Management Announcement] #10",
+      "body": "The first chapter of the server's Criminal Law has been amended. Please check the following website for details.",
       "footer": "Posted on: 2024/09/08 08:50 | "
     },
     {
       "id": "announcement-9",
-      "header": "【管理層公告】#9",
-      "body": "本服的官網，歡迎投稿（在主頁最底下） <a href=\"https://weierduo.webnode.tw/\" target=\"_blank\">https://weierduo.webnode.tw/</a> (更新:此網站已廢棄)",
+      "header": "[Management Announcement] #9",
+      "body": "The official website of this server is open for submissions (at the bottom of the homepage): <a href=\"https://weierduo.webnode.tw/\" target=\"_blank\">https://weierduo.webnode.tw/</a> (Update: This website is now deprecated).",
       "footer": "Posted on: 2024/09/01 18:01 | "
     },
     {
       "id": "announcement-8",
-      "header": "【管理層公告】#8",
-      "body": "DC新功能:輸入\"!ip\" 就會出現基岩和java的ip了",
+      "header": "[Management Announcement] #8",
+      "body": "New Discord feature: Type \"!ip\" to get the Bedrock and Java server IPs.",
       "footer": "Posted on: 2024/08/24 00:48 | "
     },
     {
       "id": "announcement-7",
-      "header": "【管理層公告】#7",
-      "body": "伺服器故障已排除",
+      "header": "[Management Announcement] #7",
+      "body": "The server malfunction has been resolved.",
       "footer": "Posted on: 2024/08/22 07:15 | "
     },
     {
       "id": "announcement-6",
-      "header": "【管理層公告】#6", 
-      "body": "由於插件有問題，伺服器暫時關閉",
+      "header": "[Management Announcement] #6",
+      "body": "Due to a plugin issue, the server is temporarily shut down.",
       "footer": "Posted on: 2024/08/21 19:20 | "
     },
-    { 
+    {
       "id": "announcement-5",
-      "header": "【管理層公告】#5",
-      "body": "伺服器已恢復正常運行",
+      "header": "[Management Announcement] #5",
+      "body": "The server has resumed normal operations.",
       "footer": "Posted on: 2024/08/20 01:12 | "
     },
-    { 
+    {
       "id": "announcement-4",
-      "header": "【管理層公告】#4",
-      "body": "當前伺服器正進行維修，暫時處於關閉狀態",
+      "header": "[Management Announcement] #4",
+      "body": "The server is currently under maintenance and temporarily offline.",
       "footer": "Posted on: 2024/08/19 18:31 | "
     },
-    { 
+    {
       "id": "announcement-3",
-      "header": "【管理層公告】#3", 
-      "body": "即日起有任何問題請到 DC群組開客服單，或至首頁點擊聯絡我們，DC能比較快回覆",
+      "header": "[Management Announcement] #3",
+      "body": "From now on, please open a support ticket in the Discord group for any issues, or click 'Contact Us' on the homepage. Discord responses are faster.",
       "footer": "Posted on: 2024/08/15 23:36 | "
     },
-    { 
+    {
       "id": "announcement-2",
-      "header": "【管理層公告】#2", 
-      "body": "即日起開放成立政黨與公會，有意願者請至DC伺服器登記處登記",
+      "header": "[Management Announcement] #2",
+      "body": "Starting today, the establishment of political parties and guilds is allowed. Interested individuals should register in the Discord server registration area.",
       "footer": "Posted on: 2024/08/01 16:46 | "
     },
-    { 
+    {
       "id": "announcement-1",
-      "header": "【管理層公告】#1", 
-      "body": "如本群到300人並且活躍的話抽200元steam禮品卡",
+      "header": "[Management Announcement] #1",
+      "body": "If this group reaches 300 active members, a 200 TWD Steam gift card will be given away.",
       "footer": "Posted on: 2024/07/28 21:57 | "
     }
   ]

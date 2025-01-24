@@ -1,7 +1,7 @@
 const announcementsPerPage = 10; // 每頁顯示 10 個公告
 
 // 使用 fetch 讀取外部的 JSON 檔案
-fetch('/json/announcements.json')  // 請確保這是 JSON 文件的正確路徑
+fetch('https://verdo568.github.io/en_json/announcements.json')  // 請確保這是 JSON 文件的正確路徑
     .then(response => {
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         return response.json();

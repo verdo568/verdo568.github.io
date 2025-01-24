@@ -1,6 +1,6 @@
 {
   "logo": {
-    "href": "https://verdo568.github.io",
+    "href": "https://verdo568.github.io/en",
     "src": "https://verdo568.github.io/assets/shared/logo.svg",
     "alt": "space tourism logo"
   },
@@ -12,28 +12,28 @@
   "navigation": [
     {
       "text": "Home",
-      "href": "https://verdo568.github.io",
+      "href": "https://verdo568.github.io/en",
       "ariaHidden": "00"
     },
     {
       "text": "Announcement",
-      "href": "https://verdo568.github.io/pages/announcement",
+      "href": "https://verdo568.github.io/en/pages/announcement",
       "ariaHidden": "01",
       "class": "active"
     },
     {
       "text": "Members",
-      "href": "https://verdo568.github.io/pages/members",
+      "href": "https://verdo568.github.io/en/pages/members",
       "ariaHidden": "02"
     },
     {
       "text": "Collaboration",
-      "href": "https://verdo568.github.io/pages/collaboration",
+      "href": "https://verdo568.github.io/en/pages/collaboration",
       "ariaHidden": "03"
     },
     {
       "text": "Price List",
-      "href": "https://verdo568.github.io/pages/converter",
+      "href": "https://verdo568.github.io/en/pages/converter",
       "ariaHidden": "04",
       "target": "_blank"
     },
