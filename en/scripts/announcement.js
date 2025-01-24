@@ -59,7 +59,7 @@ fetch('https://verdo568.github.io/en_json/announcements.json')  // 請確保這�
                 // 複製公告連結功能
                 const link = `${window.location.origin}${window.location.pathname}#${announcement.id}`;
                 const copyLinkText = document.createElement("span");
-                copyLinkText.textContent = "複製公告連結";
+                copyLinkText.textContent = "Copy Link";
                 copyLinkText.classList.add("copy-link-text");
                 copyLinkText.style.color = "#BB86FC"; // 設置文字顏色
                 copyLinkText.style.cursor = "pointer"; // 設置為可點擊
@@ -67,8 +67,8 @@ fetch('https://verdo568.github.io/en_json/announcements.json')  // 請確保這�
                 // 點擊複製並跳轉到對應的公告
                 copyLinkText.addEventListener("click", () => {
                     navigator.clipboard.writeText(link)
-                        .then(() => alert("公告連結已複製到剪貼簿！"))
-                        .catch(err => console.error("複製連結失敗：", err));
+                        .then(() => alert("The announcement link has been copied to the clipboard.！"))
+                        .catch(err => console.error("Failed to copy the link:", err));
                 });
 
                 footer.innerHTML = announcement.footer;
