@@ -15,6 +15,18 @@
     <script src="../scripts/collaboration.js" defer></script>
     <script src="../scripts/header-script-pages.js" data-json="../json/collaboration_header-data.json" defer></script>
 </head>
+<script>
+  // Get the language setting of the device
+  const userLang = navigator.language || navigator.userLanguage;
+
+  // Define allowed languages
+  const allowedLanguages = ['zh-TW', 'zh-CN'];
+
+  // If the device language is not in the allowed list, redirect to another webpage
+  if (!allowedLanguages.includes(userLang)) {
+    window.location.href = "https://verdo568.github.io/en/pages/collaboration"; // Replace with your target URL
+  }
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-W49DBFB1S5"></script>
 <script>
