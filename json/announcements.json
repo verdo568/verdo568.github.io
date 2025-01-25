@@ -1,6 +1,12 @@
 {
   "announcements": [
     {
+      "id": "announcement-21",
+      "header": "【管理層公告】#21",
+      "body": "首次上線玩家需經管理員帶領後方可自由行動",
+      "footer": "Posted on: 2025/01/25 12:39 | "
+    },
+    {
       "id": "announcement-20",
       "header": "【管理層公告】#20",
       "body": "因應管理員大部分正在學測，因此1/20下午三點前不開服",
