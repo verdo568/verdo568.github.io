@@ -9,7 +9,14 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 });
-
+// 禁止使用 F12 和開發者工具快捷鍵
+document.addEventListener('keydown', function(e) {
+    // 禁止 F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+        alert('禁止打開開發者工具！');
+    }
+});
 // 禁止 iOS 和 Android 的長按操作
 document.addEventListener('touchstart', function(e) {
     if (e.touches.length > 1) {
