@@ -1,6 +1,6 @@
 ﻿# verdo568.github.io
 
-**Here is Verdo Official Website **
+**Here is Verdo Official Website**
 
 王慧喬是臭陽具
 
