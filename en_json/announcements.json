@@ -1,6 +1,18 @@
 {
   "announcements": [
     {
+      "id": "announcement-24",
+      "header": "[Management Announcement] #24",
+      "body": "Effective immediately, the Ominous Bottle is now a restricted item and will no longer drop naturally. If needed, please contact an administrator.",
+      "footer": "Posted on: 2025/02/03 12:05 | "
+    },
+    {
+      "id": "announcement-23",
+      "header": "[Management Announcement] #23",
+      "body": "Effective immediately, TNT and End Crystals are now restricted items and can no longer be crafted. If needed, please contact an administrator.",
+      "footer": "Posted on: 2025/02/03 12:05 | "
+    },    
+    {
       "id": "announcement-22",
       "header": "[Management Announcement] #22",
       "body": "Public property is a shared resource for all members. No one is allowed to take, occupy, or damage it without proper authorization. If any violation is discovered by any administrator, we will directly file a lawsuit with the Supreme Court in accordance with relevant laws to hold the violator accountable. We kindly ask everyone to comply with these rules and work together to maintain order and protect public interests.",
