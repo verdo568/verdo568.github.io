@@ -2,6 +2,6 @@
 
 **Here is Verdo Official Website**
 
-王慧喬是臭陽具
+WANG,HUEI-CIAO is GAY
 
 fork from https://github.com/EvgenyWas/The-space-travel-website
