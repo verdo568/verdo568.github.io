@@ -1,12 +1,6 @@
 {
   "announcements": [
     {
-      "id": "announcement-24",
-      "header": "[Management Announcement] #24",
-      "body": "Effective immediately, the Ominous Bottle is now a restricted item and will no longer drop naturally. If needed, please contact an administrator.",
-      "footer": "Posted on: 2025/02/03 12:05 | "
-    },
-    {
       "id": "announcement-23",
       "header": "[Management Announcement] #23",
       "body": "Effective immediately, End Crystals are now restricted items and can no longer be crafted. If needed, please contact an administrator.",
