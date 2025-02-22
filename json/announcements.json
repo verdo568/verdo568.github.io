@@ -1,6 +1,12 @@
 {
   "announcements": [
     {
+      "id": "announcement-24",
+      "header": "【管理層公告】#24",
+      "body": "已支援基岩版1.21.60",
+      "footer": "Posted on: 2025/03/17 13:00 | "
+    },
+    {
       "id": "announcement-23",
       "header": "【管理層公告】#23",
       "body": "即日起，終界水晶為管制物品，無法自行合成，需要的請向管理員聯繫",

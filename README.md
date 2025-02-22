@@ -5,7 +5,6 @@
 WANG,HUEI-CIAO is GAY
 
 
-Mr.Yu was said : Never Gonna Give You Up
 
 
 fork from https://github.com/EvgenyWas/The-space-travel-website
